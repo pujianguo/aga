@@ -1,12 +1,19 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
+import viteSvgIcons from 'vite-plugin-svg-icons'
 
 export default ({ mode }) => {
   // const isDev = mode === 'development'
   return defineConfig({
     plugins: [
       vue(),
+      viteSvgIcons({
+        // Specify the icon folder to be cached
+        iconDirs: [resolve(process.cwd(), 'src/assets/svg')],
+        // Specify symbolId format
+        symbolId: 'svg-[dir]-[name]',
+      }),
     ],
     resolve: {
       alias: {

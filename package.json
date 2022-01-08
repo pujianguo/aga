@@ -3,8 +3,6 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build:test": "vite build --mode test",
-    "build:pre": "vite build --mode pre",
     "build:release": "vite build",
     "preview": "vite preview",
     "fix": "eslint --fix src"
@@ -33,6 +31,7 @@
     "stylelint-config-standard-scss": "^3.0.0",
     "unplugin-auto-import": "^0.5.4",
     "unplugin-vue-components": "^0.17.11",
-    "vite": "^2.7.2"
+    "vite": "^2.7.2",
+    "vite-plugin-svg-icons": "^1.1.0"
   }
 }

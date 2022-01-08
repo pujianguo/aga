@@ -1,4 +1,3 @@
-
 /***
  *                                       _           _   ______ _                           _
  *         /\         ( )               | |         | | |  ___/| |                         | |
@@ -9,30 +8,30 @@
  *
  * anim
  */
-.animated [class*=ae-]:not(.done) {
+.animated [class*="ae-"]:not(.done) {
   transition-timing-function: cubic-bezier(.25, .1, .2, 1);
   transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 /* Speed */
-.animated.fast .animate [class*=ae-]:not(.done),
-.animated.fast .animate [class*=ae-]:not(.done),
-.animated.animate .fast [class*=ae-]:not(.done),
-.animated.animate [class*=ae-].fast:not(.done) {
+.animated.fast .animate [class*="ae-"]:not(.done),
+.animated.fast .animate [class*="ae-"]:not(.done),
+.animated.animate .fast [class*="ae-"]:not(.done),
+.animated.animate [class*="ae-"].fast:not(.done) {
   transition-duration: 700ms;
 }
 
-.animated .animate [class*=ae-]:not(.done),
-.animated.animate [class*=ae-]:not(.done) {
+.animated .animate [class*="ae-"]:not(.done),
+.animated.animate [class*="ae-"]:not(.done) {
   transition-duration: 800ms;
 }
 
-.animated.slow .animate [class*=ae-]:not(.done),
-.animated .animate.slow [class*=ae-]:not(.done),
-.animated .animate .slow [class*=ae-]:not(.done),
-.animated .animate [class*=ae-].slow:not(.done) {
+.animated.slow .animate [class*="ae-"]:not(.done),
+.animated .animate.slow [class*="ae-"]:not(.done),
+.animated .animate .slow [class*="ae-"]:not(.done),
+.animated .animate [class*="ae-"].slow:not(.done) {
   transition-duration: 1000ms;
 }
 
@@ -228,212 +227,212 @@
 }
 
 /* Directions */
-.animated:not(.animateOnEvent) [class*=ae-]:not(.done),
-.animated:not(.animateOnEvent) .fromBottom [class*=ae-]:not(.done),
-.animated:not(.animateOnEvent).fromBottom [class*=ae-]:not(.done),
-.slides.animated:not(.animateOnEvent) [class*=ae-].fromBottom:not(.done),
-.popup.animated:not(.animateOnEvent) [class*=ae-].fromBottom:not(.done) {
+.animated:not(.animateOnEvent) [class*="ae-"]:not(.done),
+.animated:not(.animateOnEvent) .fromBottom [class*="ae-"]:not(.done),
+.animated:not(.animateOnEvent).fromBottom [class*="ae-"]:not(.done),
+.slides.animated:not(.animateOnEvent) [class*="ae-"].fromBottom:not(.done),
+.popup.animated:not(.animateOnEvent) [class*="ae-"].fromBottom:not(.done) {
   visibility: hidden;
   opacity: 0;
   transform: translate3d(0, 50px, 0);
 }
 
-.animated .fromTop [class*=ae-]:not(.done),
-.animated.fromTop [class*=ae-]:not(.done),
-.slides.animated [class*=ae-].fromTop:not(.done),
-.popup.animated [class*=ae-].fromTop:not(.done) {
+.animated .fromTop [class*="ae-"]:not(.done),
+.animated.fromTop [class*="ae-"]:not(.done),
+.slides.animated [class*="ae-"].fromTop:not(.done),
+.popup.animated [class*="ae-"].fromTop:not(.done) {
   transform: translate3d(0, -50px, 0);
 }
 
-.animated .fromLeft [class*=ae-]:not(.done),
-.animated.fromLeft [class*=ae-]:not(.done),
-.slides.animated [class*=ae-].fromLeft:not(.done),
-.popup.animated [class*=ae-].fromLeft:not(.done) {
+.animated .fromLeft [class*="ae-"]:not(.done),
+.animated.fromLeft [class*="ae-"]:not(.done),
+.slides.animated [class*="ae-"].fromLeft:not(.done),
+.popup.animated [class*="ae-"].fromLeft:not(.done) {
   transform: translate3d(-50px, 0, 0);
 }
 
-.animated .fromRight [class*=ae-]:not(.done),
-.animated.fromRight [class*=ae-]:not(.done),
-.slides.animated [class*=ae-].fromRight:not(.done),
-.popup.animated [class*=ae-].fromRight:not(.done) {
+.animated .fromRight [class*="ae-"]:not(.done),
+.animated.fromRight [class*="ae-"]:not(.done),
+.slides.animated [class*="ae-"].fromRight:not(.done),
+.popup.animated [class*="ae-"].fromRight:not(.done) {
   transform: translate3d(50px, 0, 0);
 }
 
-.animated .fromCenter [class*=ae-]:not(.done),
-.animated.fromCenter [class*=ae-]:not(.done),
-.slides.animated [class*=ae-].fromCenter:not(.done),
-.popup.animated [class*=ae-].fromCenter:not(.done) {
+.animated .fromCenter [class*="ae-"]:not(.done),
+.animated.fromCenter [class*="ae-"]:not(.done),
+.slides.animated [class*="ae-"].fromCenter:not(.done),
+.popup.animated [class*="ae-"].fromCenter:not(.done) {
   transform: scale(.9) translate3d(0, 0, 0);
 }
 
-.animated .fromAbove [class*=ae-]:not(.done),
-.animated.fromAbove [class*=ae-]:not(.done),
-.slides.animated [class*=ae-].fromAbove:not(.done),
-.popup.animated [class*=ae-].fromAbove:not(.done) {
+.animated .fromAbove [class*="ae-"]:not(.done),
+.animated.fromAbove [class*="ae-"]:not(.done),
+.slides.animated [class*="ae-"].fromAbove:not(.done),
+.popup.animated [class*="ae-"].fromAbove:not(.done) {
   transform: scale(1.1) translate3d(0, 0, 0);
 }
 
-.animated .fromBottomLeft [class*=ae-]:not(.done),
-.animated.fromBottomLeft [class*=ae-]:not(.done),
-.slides.animated [class*=ae-].fromBottomLeft:not(.done),
-.popup.animated [class*=ae-].fromBottomLeft:not(.done) {
+.animated .fromBottomLeft [class*="ae-"]:not(.done),
+.animated.fromBottomLeft [class*="ae-"]:not(.done),
+.slides.animated [class*="ae-"].fromBottomLeft:not(.done),
+.popup.animated [class*="ae-"].fromBottomLeft:not(.done) {
   transform: translate3d(-50px, 50px, 0);
 }
 
-.animated .fromTopLeft [class*=ae-]:not(.done),
-.animated.fromTopLeft [class*=ae-]:not(.done),
-.slides.animated [class*=ae-].fromTopLeft:not(.done),
-.popup.animated [class*=ae-].fromTopLeft:not(.done) {
+.animated .fromTopLeft [class*="ae-"]:not(.done),
+.animated.fromTopLeft [class*="ae-"]:not(.done),
+.slides.animated [class*="ae-"].fromTopLeft:not(.done),
+.popup.animated [class*="ae-"].fromTopLeft:not(.done) {
   transform: translate3d(-50px, -50px, 0);
 }
 
-.animated .fromBottomRight [class*=ae-]:not(.done),
-.animated.fromBottomRight [class*=ae-]:not(.done),
-.slides.animated [class*=ae-].fromBottomRight:not(.done),
-.popup.animated [class*=ae-].fromBottomRight:not(.done) {
+.animated .fromBottomRight [class*="ae-"]:not(.done),
+.animated.fromBottomRight [class*="ae-"]:not(.done),
+.slides.animated [class*="ae-"].fromBottomRight:not(.done),
+.popup.animated [class*="ae-"].fromBottomRight:not(.done) {
   transform: translate3d(50px, 50px, 0);
 }
 
-.animated .fromTopRight [class*=ae-]:not(.done),
-.animated.fromTopRight [class*=ae-]:not(.done),
-.slides.animated [class*=ae-].fromTopRight:not(.done),
-.popup.animated [class*=ae-].fromTopRight:not(.done) {
+.animated .fromTopRight [class*="ae-"]:not(.done),
+.animated.fromTopRight [class*="ae-"]:not(.done),
+.slides.animated [class*="ae-"].fromTopRight:not(.done),
+.popup.animated [class*="ae-"].fromTopRight:not(.done) {
   transform: translate3d(50px, -50px, 0);
 }
 
-.animated .fadeIn [class*=ae-]:not(.done),
-.animated.fadeIn [class*=ae-]:not(.done),
-.slides.animated [class*=ae-].fadeIn:not(.done),
-.popup.animated [class*=ae-].fadeIn:not(.done) {
+.animated .fadeIn [class*="ae-"]:not(.done),
+.animated.fadeIn [class*="ae-"]:not(.done),
+.slides.animated [class*="ae-"].fadeIn:not(.done),
+.popup.animated [class*="ae-"].fadeIn:not(.done) {
   transform: scale(1) translate3d(0, 0, 0);
 }
 
-.animated .fromBlur [class*=ae-]:not(.done),
-.animated.fromBlur [class*=ae-]:not(.done),
-.slides.animated [class*=ae-].fromBlur:not(.done),
-.popup.animated [class*=ae-].fromBlur:not(.done) {
+.animated .fromBlur [class*="ae-"]:not(.done),
+.animated.fromBlur [class*="ae-"]:not(.done),
+.slides.animated [class*="ae-"].fromBlur:not(.done),
+.popup.animated [class*="ae-"].fromBlur:not(.done) {
   filter: blur(10px);
   transform: scale(1) translate3d(0, 0, 0);
 }
 
 /* Final Step */
-.slides.animated .animate.active [class*=ae-]:not(.done),
-.popup.animated .animate.active [class*=ae-]:not(.done),
-.slides .animated.animate.active [class*=ae-]:not(.done) {
+.slides.animated .animate.active [class*="ae-"]:not(.done),
+.popup.animated .animate.active [class*="ae-"]:not(.done),
+.slides .animated.animate.active [class*="ae-"]:not(.done) {
   visibility: visible;
   filter: none;
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 /* Animated on scroll */
 .animateOnEvent {
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 /* hide elements */
-.animateOnEvent [class*=ae-]:not(.done):not(.do) {
+.animateOnEvent [class*="ae-"]:not(.done):not(.do) {
   visibility: hidden;
   opacity: 0;
 }
 
 /* Speed */
-.animateOnEvent [class*=ae-].do {
+.animateOnEvent [class*="ae-"].do {
   visibility: visible;
   animation-duration: 800ms;
   animation-fill-mode: backwards;
 }
 
-.animateOnEvent.fast [class*=ae-].do,
-.animateOnEvent .fast [class*=ae-].do,
-.animateOnEvent [class*=ae-].do.fast {
+.animateOnEvent.fast [class*="ae-"].do,
+.animateOnEvent .fast [class*="ae-"].do,
+.animateOnEvent [class*="ae-"].do.fast {
   animation-duration: 700ms;
 }
 
-.animateOnEvent.slow [class*=ae-].do,
-.animateOnEvent .slow [class*=ae-].do,
-.animateOnEvent [class*=ae-].do.slow {
+.animateOnEvent.slow [class*="ae-"].do,
+.animateOnEvent .slow [class*="ae-"].do,
+.animateOnEvent [class*="ae-"].do.slow {
   animation-duration: 1000ms;
 }
 
 /* Directions */
-.animateOnEvent [class*=ae-].do {
+.animateOnEvent [class*="ae-"].do {
   animation-name: fromBottom;
 }
 
 /* generate directions */
-.animateOnEvent.fromBottom [class*=ae-].do,
-.animateOnEvent .fromBottom [class*=ae-].do,
-.animateOnEvent [class*=ae-].do.fromBottom {
+.animateOnEvent.fromBottom [class*="ae-"].do,
+.animateOnEvent .fromBottom [class*="ae-"].do,
+.animateOnEvent [class*="ae-"].do.fromBottom {
   animation-name: fromBottom;
 }
 
-.animateOnEvent.fromTop [class*=ae-].do,
-.animateOnEvent .fromTop [class*=ae-].do,
-.animateOnEvent [class*=ae-].do.fromTop {
+.animateOnEvent.fromTop [class*="ae-"].do,
+.animateOnEvent .fromTop [class*="ae-"].do,
+.animateOnEvent [class*="ae-"].do.fromTop {
   animation-name: fromTop;
 }
 
-.animateOnEvent.fromLeft [class*=ae-].do,
-.animateOnEvent .fromLeft [class*=ae-].do,
-.animateOnEvent [class*=ae-].do.fromLeft {
+.animateOnEvent.fromLeft [class*="ae-"].do,
+.animateOnEvent .fromLeft [class*="ae-"].do,
+.animateOnEvent [class*="ae-"].do.fromLeft {
   animation-name: fromLeft;
 }
 
-.animateOnEvent.fromRight [class*=ae-].do,
-.animateOnEvent .fromRight [class*=ae-].do,
-.animateOnEvent [class*=ae-].do.fromRight {
+.animateOnEvent.fromRight [class*="ae-"].do,
+.animateOnEvent .fromRight [class*="ae-"].do,
+.animateOnEvent [class*="ae-"].do.fromRight {
   animation-name: fromRight;
 }
 
-.animateOnEvent.fromCenter [class*=ae-].do,
-.animateOnEvent .fromCenter [class*=ae-].do,
-.animateOnEvent [class*=ae-].do.fromCenter {
+.animateOnEvent.fromCenter [class*="ae-"].do,
+.animateOnEvent .fromCenter [class*="ae-"].do,
+.animateOnEvent [class*="ae-"].do.fromCenter {
   animation-name: fromCenter;
 }
 
-.animateOnEvent.fromAbove [class*=ae-].do,
-.animateOnEvent .fromAbove [class*=ae-].do,
-.animateOnEvent [class*=ae-].do.fromAbove {
+.animateOnEvent.fromAbove [class*="ae-"].do,
+.animateOnEvent .fromAbove [class*="ae-"].do,
+.animateOnEvent [class*="ae-"].do.fromAbove {
   animation-name: fromAbove;
 }
 
-.animateOnEvent.fromBottomLeft [class*=ae-].do,
-.animateOnEvent .fromBottomLeft [class*=ae-].do,
-.animateOnEvent [class*=ae-].do.fromBottomLeft {
+.animateOnEvent.fromBottomLeft [class*="ae-"].do,
+.animateOnEvent .fromBottomLeft [class*="ae-"].do,
+.animateOnEvent [class*="ae-"].do.fromBottomLeft {
   animation-name: fromBottomLeft;
 }
 
-.animateOnEvent.fromTopLeft [class*=ae-].do,
-.animateOnEvent .fromTopLeft [class*=ae-].do,
-.animateOnEvent [class*=ae-].do.fromTopLeft {
+.animateOnEvent.fromTopLeft [class*="ae-"].do,
+.animateOnEvent .fromTopLeft [class*="ae-"].do,
+.animateOnEvent [class*="ae-"].do.fromTopLeft {
   animation-name: fromTopLeft;
 }
 
-.animateOnEvent.fromBottomRight [class*=ae-].do,
-.animateOnEvent .fromBottomRight [class*=ae-].do,
-.animateOnEvent [class*=ae-].do.fromBottomRight {
+.animateOnEvent.fromBottomRight [class*="ae-"].do,
+.animateOnEvent .fromBottomRight [class*="ae-"].do,
+.animateOnEvent [class*="ae-"].do.fromBottomRight {
   animation-name: fromBottomRight;
 }
 
-.animateOnEvent.fromTopRight [class*=ae-].do,
-.animateOnEvent .fromTopRight [class*=ae-].do,
-.animateOnEvent [class*=ae-].do.fromTopRight {
+.animateOnEvent.fromTopRight [class*="ae-"].do,
+.animateOnEvent .fromTopRight [class*="ae-"].do,
+.animateOnEvent [class*="ae-"].do.fromTopRight {
   animation-name: fromTopRight;
 }
 
-.animateOnEvent.fadeIn [class*=ae-].do,
-.animateOnEvent .fadeIn [class*=ae-].do,
-.animateOnEvent [class*=ae-].do.fadeIn {
+.animateOnEvent.fadeIn [class*="ae-"].do,
+.animateOnEvent .fadeIn [class*="ae-"].do,
+.animateOnEvent [class*="ae-"].do.fadeIn {
   animation-name: fadeIn;
 }
 
-.animateOnEvent.fromBlur [class*=ae-].do,
-.animateOnEvent .fromBlur [class*=ae-].do,
-.animateOnEvent [class*=ae-].do.fromBlur {
+.animateOnEvent.fromBlur [class*="ae-"].do,
+.animateOnEvent .fromBlur [class*="ae-"].do,
+.animateOnEvent [class*="ae-"].do.fromBlur {
   animation-name: fromBlur;
 }
 
@@ -865,8 +864,6 @@
 .slides:not(.scroll) .slide.after .rolling-element.inverse.pct-90 {
   transform: translateY(90%);
 }
-
-
 
 /***
  *      ____             _                                   _    ______  __  __          _

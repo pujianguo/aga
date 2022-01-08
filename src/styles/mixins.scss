@@ -1,6 +1,6 @@
-@import './variables.scss';
+@import "./variables.scss";
 
-@mixin flex-center () {
+@mixin flex-center() {
   display: flex;
   align-items: center;
   justify-content: center;
