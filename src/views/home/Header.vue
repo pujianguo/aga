@@ -1,10 +1,7 @@
 <template>
   <div class="home-header fromTop ae-1 do">
     <div class="header-left">
-      <div class="logo-box">
-        <svg-img class="logo-img" name="logo"></svg-img>
-        <span class="logo-text">AGA</span>
-      </div>
+      <svg-img class="logo-img" name="logo-text"></svg-img>
       <div class="menu">
         <div v-for="item in menuList" :key="item.id" class="menu-item" :class="{'active': routeName === item.routeName}">{{item.title}}</div>
       </div>
@@ -74,25 +71,9 @@ onMounted(() => {
     left: 60px;
     z-index: 100;
 
-    .logo-box {
-      display: flex;
-      align-items: center;
-
-      .logo-img {
-        width: 44px;
-        height: 44px;
-      }
-
-      .logo-text {
-        margin-left: 5px;
-        font-family: Cindie Mono;
-        font-size: 29px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 46px;
-        text-align: center;
-        letter-spacing: 0;
-      }
+    .logo-img {
+      width: 140px;
+      height: 46px;
     }
 
     .menu {

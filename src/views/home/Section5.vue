@@ -4,13 +4,12 @@
       <h1 class="section-title">Future Features</h1>
       <div class="content">
         <div class="item" v-for="item in list" :key="item.id">
-          <div class="item-title" v-html="item.title"></div>
+          <div class="item-bg">
+            <div class="item-title" v-html="item.title"></div>
+          </div>
           <div class="item-content">
-            <div class="top"></div>
-            <div class="bottom"><span>MORE</span></div>
-            <div class="img">
-              <svg-img name="ball"></svg-img>
-            </div>
+            <div class="item-title" v-html="item.title"></div>
+            <div class="item-desc" v-html="item.desc"></div>
           </div>
         </div>
       </div>
@@ -26,19 +25,19 @@ const initGsap = (gsap, ScrollTrigger) => {
 useInitGsap(initGsap)
 
 const list = [
-  { id: 1, title: 'Fund and NFT', desc: 'Raise Fund and NFT by publish your requests' },
-  { id: 2, title: 'Education <br> Task', desc: 'xxxxxxxxxxxxxxxx' },
-  { id: 3, title: 'Game Strategy Task', desc: 'xxxxxxxxxxxxxxxx' },
-  { id: 4, title: 'Medal of <br> Achievement', desc: 'xxxxxxxxxxxxxxxx' },
-  { id: 5, title: 'Recruit <br> Player', desc: 'xxxxxxxxxxxxxxxx' },
-  { id: 6, title: 'E-sports eventsand <br> reward', desc: 'xxxxxxxxxxxxxxxx' },
+  { id: 1, title: 'Fund and NFT', desc: 'Raise Fund and NFT <br> By publish your requests' },
+  { id: 2, title: 'Education <br> Task', desc: 'Example：Get 180 SLP <br> From Axie in 3 day. <br> Bonus provided by AGA.' },
+  { id: 3, title: 'Game Strategy <br> Task', desc: 'Example：Describe your strategy <br> In Mir4 and attach a ROI. <br>  Bonus provided by AGA.' },
+  { id: 4, title: 'Medal of <br> Achievement', desc: 'Unlock guild achievement <br> Badges and get special benefits <br> To help the community.' },
+  { id: 5, title: 'Recruit <br> Player', desc: 'Post recruiting player programs <br> And offer incentives. ' },
+  { id: 6, title: 'E-sports eventsand <br> reward', desc: 'Hold e-sports events <br> And discover all <br> The possibilities of games.' },
 ]
 </script>
 
 <style lang="scss">
 .home-section-5 {
   .container {
-    padding: 100px;
+    padding: 100px 20px;
 
     .section-title {
       text-align: right;
@@ -53,16 +52,102 @@ const list = [
       margin-top: 156px;
 
       .item {
+        position: relative;
         box-sizing: border-box;
-        width: 345px;
+        display: flex;
+        flex-direction: column;
+        width: 346px;
         height: 384px;
         padding-top: 16px;
         margin-bottom: 55px;
+        overflow: hidden;
         background: rgb(64 64 64 / 50%);
         border-radius: 20px;
 
-        .item-title {
+        &:hover {
+          .item-bg {
+            top: -100%;
+
+            .item-title {
+              display: none;
+            }
+          }
+
+          .item-content {
+            top: 0%;
+          }
+        }
+
+        .item-bg {
+          position: absolute;
+          top: 0;
+          left: 0;
           box-sizing: border-box;
+          display: flex;
+          align-items: flex-end;
+          width: 100%;
+          height: 100%;
+          padding: 16px;
+          transition: all .5s;
+        }
+
+        &:nth-child(1) {
+          .item-bg {
+            background: url("/images/home/section5_item1_bg.svg") no-repeat center / cover;
+          }
+        }
+
+        &:nth-child(2) {
+          .item-bg {
+            background: url("/images/home/section5_item2_bg.svg") no-repeat center / cover;
+          }
+        }
+
+        &:nth-child(3) {
+          .item-bg {
+            background: url("/images/home/section5_item3_bg.svg") no-repeat center / cover;
+          }
+        }
+
+        &:nth-child(4) {
+          .item-bg {
+            background: url("/images/home/section5_item4_bg.svg") no-repeat center / cover;
+          }
+        }
+
+        &:nth-child(5) {
+          .item-bg {
+            background: url("/images/home/section5_item5_bg.svg") no-repeat center / cover;
+          }
+        }
+
+        &:nth-child(6) {
+          .item-bg {
+            background: url("/images/home/section5_item6_bg.svg") no-repeat center / cover;
+          }
+        }
+
+        .item-content {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          background: #7942f7;
+          transition: all .5s;
+        }
+
+        .item-title {
+          position: relative;
+          z-index: 1;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: 100%;
           height: 80px;
           font-family: Futura;
@@ -73,61 +158,18 @@ const list = [
           color: #fff;
           text-align: center;
           text-transform: uppercase;
-          opacity: .7;
         }
 
-        .item-content {
-          position: relative;
-          box-sizing: border-box;
-          width: calc(100% - 60px);
-          height: 255px;
-          padding: 0 30px;
-
-          .top,
-          .botttom {
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 20px;
-
-            &::before {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 20px;
-              height: 20px;
-              content: "";
-              border-color: #fff;
-              border-style: solid;
-            }
-
-            &::after {
-              position: absolute;
-              top: 0;
-              right: 0;
-              width: 20px;
-              height: 20px;
-              content: "";
-              border-color: #fff;
-              border-style: solid;
-            }
-          }
-
-          .top {
-            top: 0;
-
-            &::before{
-
-            }
-
-            &::after{
-
-            }
-          }
-
-          .bottom {
-            bottom: 0;
-          }
+        .item-desc {
+          margin-top: 28px;
+          font-family: Futura;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 32px;
+          text-align: center;
+          letter-spacing: 0;
+          opacity: .7;
         }
       }
     }

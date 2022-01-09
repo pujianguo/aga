@@ -45,7 +45,7 @@ const mousemoveHandler = (e) => {
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 90px 245px 200px;
+    padding: 90px 20px 200px;
 
     .line {
       position: relative;

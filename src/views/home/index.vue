@@ -1,15 +1,13 @@
 <template>
   <div class="home-page animateOnEvent">
-    <!-- <Header /> -->
-    <!-- <Section1 /> -->
+    <Header />
+    <Section1 />
     <Section2 />
     <!-- <Section3 /> -->
     <!-- <Section4 /> -->
-    <!-- <Section5 /> -->
-    <!-- <Section6 /> -->
-    <!-- <Section7 /> -->
-    <!-- <Section8 /> -->
-    <!-- <Section9 /> -->
+    <Section5 />
+    <Section6 />
+    <Section7 />
   </div>
 </template>
 
@@ -22,8 +20,6 @@ import Section4 from './Section4.vue'
 import Section5 from './Section5.vue'
 import Section6 from './Section6.vue'
 import Section7 from './Section7.vue'
-import Section8 from './Section8.vue'
-import Section9 from './Section9.vue'
 
 </script>
 
@@ -38,7 +34,7 @@ import Section9 from './Section9.vue'
     .container {
       box-sizing: border-box;
       width: 100%;
-      max-width: 1680px;
+      max-width: 1200px;
       height: 100%;
       min-height: 100vh;
       margin: 0 auto;

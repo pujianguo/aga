@@ -22,16 +22,7 @@
           <svg-icon class="down-icon" name="down"></svg-icon>
         </div>
         <div class="right">
-          <svg-img class="circle-img" name="circle"></svg-img>
-          <div class="ball-box">
-            <!-- <div class="box-content">
-              <div class="box-2">
-                <div class="box-3">
-                  <svg-img class="ball" name="ball"></svg-img>
-                </div>
-              </div>
-            </div> -->
-          </div>
+          <circle-image class="right-image"></circle-image>
         </div>
       </div>
     </div>
@@ -39,6 +30,7 @@
 </template>
 
 <script setup>
+import CircleImage from './Section2/Circle.vue'
 import useInitGsap from '@/hooks/useInitGsap'
 
 const initGsap = (gsap, ScrollTrigger) => {
@@ -57,7 +49,7 @@ useInitGsap(initGsap)
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 90px 245px 200px;
+    padding: 90px 20px 200px;
 
     .title {
       font-family: Mackay Test;
@@ -124,34 +116,11 @@ useInitGsap(initGsap)
       }
 
       .right {
-        .circle-img {
-          width: 775px;
-          height: 775px;
-        }
+        flex: 1;
 
-        .ball-box {
-          width: 775px;
-          height: 775px;
-          background: url();
-        }
-
-        .box-1 {
-          .box-2 {
-            .box-3 {
-              width: 274px;
-              height: 274px;
-
-              .ball {
-                width: 274px;
-                height: 274px;
-              }
-
-              .circle {
-                width: 766px;
-                height: 766px;
-              }
-            }
-          }
+        .right-image {
+          width: 100%;
+          height: 100%;
         }
       }
     }

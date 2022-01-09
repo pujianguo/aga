@@ -25,6 +25,17 @@ export default ({ mode }) => {
         api: resolve(__dirname, 'src/api'),
       },
     },
+    build: {
+      terserOptions: {
+        compress: {
+          keep_infinity: true, // (默认: false) -- 传递true以防止Infinity被压缩成1/0，这可能会导致 Chrome 上的性能问题。
+          drop_console: true, // 生产环境删除console
+          drop_debugger: true,
+        },
+      },
+      reportCompressedSize: false, // 默认true, 启用/禁用 gzip 压缩大小报告。压缩大型输出文件可能会很慢，因此禁用该功能可能会提高大型项目的构建性能。
+      chunkSizeWarningLimit: 2000, // 默认500 chunk 大小警告的限制（以 kbs 为单位）。
+    },
     css: {
       preprocessorOptions: {
         scss: {

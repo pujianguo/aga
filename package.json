@@ -5,7 +5,8 @@
     "dev": "vite",
     "build:release": "vite build",
     "preview": "vite preview",
-    "fix": "eslint --fix src"
+    "fix": "eslint --fix src",
+    "lang": "node lang.js"
   },
   "dependencies": {
     "gsap": "^3.8.0",
