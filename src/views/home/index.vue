@@ -1,17 +1,19 @@
 <template>
   <div class="home-page animateOnEvent">
-    <Header />
-    <Section1 />
-    <Section2 />
-    <!-- <Section3 /> -->
-    <!-- <Section4 /> -->
-    <Section5 />
-    <Section6 />
-    <Section7 />
+    <!-- <Header /> -->
+    <!-- <Section1 /> -->
+    <!-- <Section2 /> -->
+    <Section3 />
+    <Section4 />
+    <!-- <Section5 /> -->
+    <!-- <Section6 /> -->
+    <!-- <Section7 /> -->
   </div>
 </template>
 
 <script setup>
+import 'swiper/css'
+import 'swiper/css/pagination'
 import Header from './Header.vue'
 import Section1 from './Section1.vue'
 import Section2 from './Section2.vue'

@@ -1,14 +1,51 @@
 <script setup>
-import { ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import useInitGsap from '@/hooks/useInitGsap'
+import Swiper from 'swiper'
 
 const initGsap = (gsap, ScrollTrigger) => {
 }
 useInitGsap(initGsap)
 
-const currentIndex = ref(1)
-const changeItem = (index) => {
+// swiper
+let swiper = null
+onMounted(() => {
+  swiper = new Swiper('.home-section-3 .swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+  })
+})
+const list = [
+  { id: 1, title: 'Latest and Top Games Offering', desc: 'Arche have the latest game connection and information and share the information such as the game strategy to the guilds that allows them to join the game in early stage.', imgUrl: '/images/home/section3_item1_bg.png' },
+  { id: 2, title: 'Launchpad Whitelist', desc: 'Can get whitelisted from Game Asset Offerings for Guilds that support Games in the early stage or invested in.', imgUrl: '/images/home/section3_item2_bg.png' },
+  { id: 3, title: 'Listed inArche Network', desc: 'The guilds logo will be shown below the games that they participate in, that allows more people to enter the guilds when they wanna join the game.', imgUrl: '/images/home/section3_item3_bg.png' },
+  { id: 4, title: 'MORE OPPORTUNITIES', desc: 'When a projects want to do promotion, they could submit their event detail to Arche and we will deliver the event information to the Guilds in AGA. And the Guilds community could get the exclusive incentive.', imgUrl: '/images/home/section3_item4_bg.png' },
+]
+const currentIndex = ref(0)
+const currentItem = computed(() => {
+  return list[currentIndex.value]
+})
+const handleItemChange = (index) => {
   currentIndex.value = index
+  swiper.slideTo(index)
+}
+const handlePrev = () => {
+  if (currentIndex.value > 1) {
+    currentIndex.value--
+  } else {
+    currentIndex.value = list.length - 1
+  }
+  swiper.slidePrev()
+}
+const handleNext = () => {
+  if (currentIndex.value < list.length - 1) {
+    currentIndex.value++
+  } else {
+    currentIndex.value = 0
+  }
+  swiper.slideNext()
 }
 </script>
 
@@ -24,70 +61,32 @@ const changeItem = (index) => {
           <div class="item"></div>
         </div>
         <div class="content-box">
-          <div class="item" :class="{'active': currentIndex === 1}" @click="changeItem(1)">
+          <div class="item" v-for="(item, index) in list" :key="item.id" :class="{'active': currentIndex === index}"
+            @click="handleItemChange(index)">
             <div class="item-icon">
-              <svg-img class="icon-ball" name="ball"></svg-img>
+              <svg-img class="icon-ball" name="ball" v-for="i in item.id" :key="index + i"></svg-img>
             </div>
             <div class="item-text">
-              Latest and <br>Top Games Offering
-            </div>
-          </div>
-          <div class="item" :class="{'active': currentIndex === 2}" @click="changeItem(2)">
-            <div class="item-icon">
-              <svg-img class="icon-ball" name="ball"></svg-img>
-              <svg-img class="icon-ball" name="ball"></svg-img>
-            </div>
-            <div class="item-text">
-              Launchpad<br>Whitelist
-            </div>
-          </div>
-          <div class="item" :class="{'active': currentIndex === 3}" @click="changeItem(3)">
-            <div class="item-icon">
-              <svg-img class="icon-ball" name="ball"></svg-img>
-              <svg-img class="icon-ball" name="ball"></svg-img>
-              <svg-img class="icon-ball" name="ball"></svg-img>
-            </div>
-            <div class="item-text">
-              Listed in <br>
-              Arche Network
-            </div>
-          </div>
-          <div class="item" :class="{'active': currentIndex === 4}" @click="changeItem(4)">
-            <div class="item-icon">
-              <svg-img class="icon-ball" name="ball"></svg-img>
-              <svg-img class="icon-ball" name="ball"></svg-img>
-              <svg-img class="icon-ball" name="ball"></svg-img>
-              <svg-img class="icon-ball" name="ball"></svg-img>
-            </div>
-            <div class="item-text">
-              More <br> Incentive
+              {{item.title}}
             </div>
           </div>
           <svg-icon class="last-icon" name="plus"></svg-icon>
         </div>
       </div>
-      <div class="img-box">
-        <div class="box-item" style="background: url(/images/home/section3_img_bg_1.png) no-repeat center / cover;">
-          <div class="content">
-            Arche have the latest game connection and information and share the information such as the game strategy to the guilds that allows them to join the game in early stage.
-          </div>
-        </div>
-        <div class="box-item" style="background: url(/images/home/section3_img_bg_1.png) no-repeat center / cover;">
-          <div class="content">
-            Arche have the latest game connection and information and share the information such as the game strategy to the guilds that allows them to join the game in early stage.
-          </div>
-        </div>
-        <div class="box-item" style="background: url(/images/home/section3_img_bg_1.png) no-repeat center / cover;">
-          <div class="content">
-            Arche have the latest game connection and information and share the information such as the game strategy to the guilds that allows them to join the game in early stage.
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="item in list" :key="item.id"
+            :style="{'--url': `url(${item.imgUrl})`}"
+            >
+              <div class="content">{{item.desc}}</div>
           </div>
         </div>
       </div>
       <div class="line"></div>
       <div class="footer">
-        <svg-icon class="icon" name="left"></svg-icon>
-        <div class="btn">MORE OPPORTUNITIES</div>
-        <svg-icon class="icon" name="right"></svg-icon>
+        <svg-icon class="icon" name="left" @click="handlePrev"></svg-icon>
+        <div class="btn">{{currentItem.title}}</div>
+        <svg-icon class="icon" name="right" @click="handleNext"></svg-icon>
       </div>
     </div>
   </section>
@@ -100,12 +99,14 @@ const changeItem = (index) => {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 90px 245px 200px;
+    padding: 90px 20px 200px;
 
     .title {
+      align-self: flex-end;
       margin-bottom: 147px;
       font-family: Mackay Test;
       font-size: 60px;
@@ -167,6 +168,7 @@ const changeItem = (index) => {
           }
 
           .item-text {
+            max-width: 200px;
             margin-top: 16px;
             font-family: Futura;
             font-size: 20px;
@@ -219,50 +221,71 @@ const changeItem = (index) => {
       }
     }
 
-    .img-box {
-      display: flex;
-      align-items: center;
-      width: 100%;
+    .swiper-container {
+      position: relative;
+      width: 150vw;
       height: 425px;
       margin-top: 194px;
 
-      .box-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 798px;
-        height: 425px;
-        border: 1px solid #fff;
-        border-radius: 425px;
+      .swiper-wrapper {
+        .swiper-slide {
 
-        .content {
-          box-sizing: border-box;
+          /* Center slide text vertically */
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 630px;
-          height: 194px;
-          padding: 26px 80px;
-          font-family: Futura;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 32px;
-          color: #fff;
+          font-size: 18px;
           text-align: center;
-          background: #404040;
-          border-radius: 97px;
-          mix-blend-mode: normal;
-          opacity: .7;
+          background: #fff;
+          transition: 300ms;
+          transform: scale(.8);
         }
-      }
 
-      .pre-box{
+        .swiper-slide {
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
-      }
+          // width: 798px !important;
+          // height: 425px !important;
+          background: var(--url) no-repeat center / cover;
+          border: 1px solid #fff;
+          border-radius: 425px;
+          opacity: .5;
 
-      .current-box {
+          .content {
+            box-sizing: border-box;
+            display: flex;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            max-width: 630px;
+            height: 200px;
+            padding: 26px 80px;
+            margin: 0 50px;
+            font-family: Futura;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 32px;
+            color: #fff;
+            text-align: center;
+            background: #404040;
+            border-radius: 100px;
+            mix-blend-mode: normal;
+            opacity: .7;
+          }
+        }
 
+        .swiper-slide-active,
+        .swiper-slide-duplicate-active {
+          opacity: 1;
+          transform: scale(1);
+
+          .content {
+            display: flex;
+          }
+        }
       }
     }
 
@@ -288,8 +311,8 @@ const changeItem = (index) => {
 
       .btn {
         position: relative;
-        width: 350px;
         height: 60px;
+        padding: 0 20px;
         font-family: Futura;
         font-size: 25px;
         font-style: normal;
