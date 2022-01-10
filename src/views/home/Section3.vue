@@ -20,6 +20,7 @@ onMounted(() => {
   })
   swiper.on('activeIndexChange', function (e) {
     const { realIndex } = e
+    console.log('realIndex', realIndex)
     currentIndex.value = realIndex
   })
 })
@@ -34,22 +35,12 @@ const currentItem = computed(() => {
   return list[currentIndex.value]
 })
 const handleItemChange = (index) => {
-  swiper.slideTo(index - 1)
+  swiper.slideTo(index + 3)
 }
 const handlePrev = () => {
-  if (currentIndex.value > 1) {
-    currentIndex.value--
-  } else {
-    currentIndex.value = list.length - 1
-  }
   swiper.slidePrev()
 }
 const handleNext = () => {
-  if (currentIndex.value < list.length - 1) {
-    currentIndex.value++
-  } else {
-    currentIndex.value = 0
-  }
   swiper.slideNext()
 }
 </script>
