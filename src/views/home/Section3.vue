@@ -2,6 +2,7 @@
 import { computed, onMounted, ref } from 'vue'
 import useInitGsap from '@/hooks/useInitGsap'
 import Swiper from 'swiper'
+import 'swiper/css'
 
 const initGsap = (gsap, ScrollTrigger) => {
 }
@@ -14,7 +15,12 @@ onMounted(() => {
     slidesPerView: 3,
     spaceBetween: 30,
     centeredSlides: true,
+    slideToClickedSlide: true,
     loop: true,
+  })
+  swiper.on('activeIndexChange', function (e) {
+    const { realIndex } = e
+    currentIndex.value = realIndex
   })
 })
 const list = [
@@ -28,8 +34,7 @@ const currentItem = computed(() => {
   return list[currentIndex.value]
 })
 const handleItemChange = (index) => {
-  currentIndex.value = index
-  swiper.slideTo(index)
+  swiper.slideTo(index - 1)
 }
 const handlePrev = () => {
   if (currentIndex.value > 1) {
@@ -78,6 +83,7 @@ const handleNext = () => {
           <div class="swiper-slide" v-for="item in list" :key="item.id"
             :style="{'--url': `url(${item.imgUrl})`}"
             >
+              <img class="bg-img" :src="item.imgUrl" alt="">
               <div class="content">{{item.desc}}</div>
           </div>
         </div>
@@ -236,24 +242,33 @@ const handleNext = () => {
           justify-content: center;
           font-size: 18px;
           text-align: center;
-          background: #fff;
           transition: 300ms;
           transform: scale(.8);
         }
 
         .swiper-slide {
+          position: relative;
           display: flex;
           align-items: center;
           justify-content: center;
 
           // width: 798px !important;
           // height: 425px !important;
-          background: var(--url) no-repeat center / cover;
-          border: 1px solid #fff;
           border-radius: 425px;
           opacity: .5;
 
+          .bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+
           .content {
+            position: relative;
+            z-index: 1;
             box-sizing: border-box;
             display: flex;
             display: none;

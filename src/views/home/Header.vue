@@ -27,7 +27,6 @@ const initGsap = (gsap, ScrollTrigger) => {
       scrub: true,
     },
   })
-    .from('.home-header .background', { y: innerHeight * -1 }, 0)
 }
 useInitGsap(initGsap)
 
@@ -44,14 +43,7 @@ const routeName = computed(() => {
   return route.name
 })
 
-const mouseenterHandler = (e) => {
-}
 const mouseleaveHandler = () => {
-}
-
-const openMenu = ref(false)
-const openMenuHandle = () => {
-  openMenu.value = !openMenu.value
 }
 
 onMounted(() => {
