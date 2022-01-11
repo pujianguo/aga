@@ -30,8 +30,8 @@ jobs:
     - name: 'Step 4: Install'
       run: pnpm install
 
-    - name: 'Step 5: Create Language File'
-      # run: pnpm lang
+    # - name: 'Step 5: Create Language File'
+    #   run: pnpm lang
 
     - name: 'Step 6: Build Code'
       run: pnpm build:release
