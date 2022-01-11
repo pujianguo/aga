@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page animateOnEvent">
+  <div class="home-page">
     <Header />
     <Section1 />
     <Section2 />

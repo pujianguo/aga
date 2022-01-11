@@ -5,6 +5,15 @@ import Swiper from 'swiper'
 import 'swiper/css'
 
 const initGsap = (gsap, ScrollTrigger) => {
+  gsap.utils.toArray('.home-section-3').forEach(line => {
+    ScrollTrigger.create({
+      trigger: line,
+      toggleClass: 'animateOnEvent',
+      start: 'top 80%',
+      end: 'top -200%',
+      // markers: true,
+    })
+  })
 }
 useInitGsap(initGsap)
 
@@ -46,18 +55,18 @@ const handleNext = () => {
 </script>
 
 <template>
-  <section class="home-section-3">
+  <section class="home-section-3" id="section3">
     <div class="container">
-      <h1 class="title">Why Join The AGA</h1>
+      <h1 class="title fromLeft ae-1 do">Why Join The AGA</h1>
       <div class="menu">
-        <div class="line-box">
+        <div class="line-box fromLeft ae-2 do">
           <div class="item"></div>
           <div class="item"></div>
           <div class="item"></div>
           <div class="item"></div>
         </div>
         <div class="content-box">
-          <div class="item" v-for="(item, index) in list" :key="item.id" :class="{'active': currentIndex === index}"
+          <div class="item fromLeft do" v-for="(item, index) in list" :key="item.id" :class="[{'active': currentIndex === index}, 'ae-' + index]"
             @click="handleItemChange(index)">
             <div class="item-icon">
               <svg-img class="icon-ball" name="ball" v-for="i in item.id" :key="index + i"></svg-img>
@@ -66,7 +75,7 @@ const handleNext = () => {
               {{item.title}}
             </div>
           </div>
-          <svg-icon class="last-icon" name="plus"></svg-icon>
+          <!-- <svg-icon class="last-icon" name="plus"></svg-icon> -->
         </div>
       </div>
       <div class="swiper-container">

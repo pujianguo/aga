@@ -1,28 +1,28 @@
 <template>
-  <section class="home-section-2">
+  <section class="home-section-2" id="section2">
     <div class="container">
-      <h1 class="title">What Is The AGA</h1>
+      <h1 class="title fromLeft ae-1 do">What Is The AGA</h1>
       <div class="content">
         <div class="left">
           <div class="card">
-            <h2>guilds in Metaverse</h2>
-            <p>
+            <h2 class="fromLeft ae-2 do">guilds in Metaverse</h2>
+            <p class="fromLeft ae-3 do">
               AGA is a decentralized autonomous organization (DAO)
               Formed by Game guilds in Metaverse.
             </p>
           </div>
           <div class="card">
-            <h2>MORE OPPORTUNITIES</h2>
-            <p>
+            <h2 class="fromLeft ae-4 do">MORE OPPORTUNITIES</h2>
+            <p class="fromLeft ae-5 do">
               It is dedicated to helping players,<br>
               Guilds and games get more opportunities to collaborate
               Empowered by Arche Network.
             </p>
           </div>
-          <svg-icon class="down-icon" name="down"></svg-icon>
+          <svg-icon class="down-icon fromLeft ae-6 do" name="down"></svg-icon>
         </div>
         <div class="right">
-          <circle-image class="right-image"></circle-image>
+          <circle-image class="right-image fromLeft ae-6 do"></circle-image>
         </div>
       </div>
     </div>
@@ -34,9 +34,17 @@ import CircleImage from './Section2/Circle.vue'
 import useInitGsap from '@/hooks/useInitGsap'
 
 const initGsap = (gsap, ScrollTrigger) => {
+  gsap.utils.toArray('.home-section-2').forEach(line => {
+    ScrollTrigger.create({
+      trigger: line,
+      toggleClass: 'animateOnEvent',
+      start: 'top 80%',
+      end: 'top -200%',
+      // markers: true,
+    })
+  })
 }
 useInitGsap(initGsap)
-
 </script>
 
 <style lang="scss">

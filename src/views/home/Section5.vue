@@ -1,9 +1,9 @@
 <template>
-  <section class="home-section-5">
+  <section class="home-section-5" id="section5">
     <div class="container">
-      <h1 class="section-title">Future Features</h1>
+      <h1 class="section-title fromLeft do ae-3">Future Features</h1>
       <div class="content">
-        <div class="item" v-for="item in list" :key="item.id">
+        <div class="item fromLeft do" v-for="(item, index) in list" :key="item.id" :class="['ae-' + index]">
           <div class="item-bg">
             <div class="item-title" v-html="item.title"></div>
           </div>
@@ -21,6 +21,15 @@
 import useInitGsap from '@/hooks/useInitGsap'
 
 const initGsap = (gsap, ScrollTrigger) => {
+  gsap.utils.toArray('.home-section-5').forEach(line => {
+    ScrollTrigger.create({
+      trigger: line,
+      toggleClass: 'animateOnEvent',
+      start: 'top 80%',
+      end: 'top -200%',
+      // markers: true,
+    })
+  })
 }
 useInitGsap(initGsap)
 

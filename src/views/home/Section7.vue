@@ -1,17 +1,25 @@
 <script setup>
-import { computed, ref } from 'vue'
 import useInitGsap from '@/hooks/useInitGsap'
 
 const initGsap = (gsap, ScrollTrigger) => {
+  gsap.utils.toArray('.home-section-7').forEach(line => {
+    ScrollTrigger.create({
+      trigger: line,
+      toggleClass: 'animateOnEvent',
+      start: 'top 80%',
+      end: 'top -200%',
+      // markers: true,
+    })
+  })
 }
 useInitGsap(initGsap)
 
 </script>
 
 <template>
-  <section class="home-section-7">
+  <section class="home-section-7" id="section7">
     <div class="container">
-      <div class="card">
+      <div class="card fromLeft ae-1 do">
         <div class="card-title">
           <svg-img class="logo-icon" name="logo-text"></svg-img>
         </div>
@@ -22,7 +30,7 @@ useInitGsap(initGsap)
           </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card fromLeft ae-2 do">
         <div class="card-title">
           <span>About us</span>
         </div>
@@ -35,7 +43,7 @@ useInitGsap(initGsap)
           </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card fromLeft ae-3 do">
         <div class="card-title">
           <span>CONTACT AGA</span>
         </div>

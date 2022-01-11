@@ -12,7 +12,8 @@ const list =
     language: 'English',
     title: 'First subDAO of YieldGuild',
     desc: 'First subDAO of YieldGuild. Our mission is to create the biggest and most sustainable Play-To-Earn virtual economy focused on South East Asia.',
-    imgUrl: '/images/home/section4_item1_bg.png',
+    smallImage: '/images/home/section4_item1_bg.png',
+    bigImage: '/images/home/section4_item1_bg.png',
     website: '',
     community: {
       discord: '',
@@ -28,7 +29,8 @@ const list =
     language: 'English',
     title: 'YGG IS A PLAY-TO-EARN GAMING GUILD',
     desc: 'YGG IS A PLAY-TO-EARN GAMING GUILD, BRINGING PLAYERS TOGETHER TO EARN VIA BLOCKCHAIN-BASED ECONOMIES. We ARE THE SETTLERS OF NEW WORLDS IN THE METAVERSE.',
-    imgUrl: '/images/home/section4_item2_bg.png',
+    smallImage: '/images/home/section4_item2_bg.png',
+    bigImage: '/images/home/section4_item2_bg.png',
     website: '',
     community: {
       discord: '',
@@ -44,7 +46,8 @@ const list =
     language: 'English',
     title: 'A collection of contributors',
     desc: 'Avocado DAO (Decentralized Autonomous Organization) is a collection of contributors that believe in the benefits of blockchain technologies and the metaverse.',
-    imgUrl: '/images/home/section4_item3_bg.png',
+    smallImage: '/images/home/section4_item3_bg.png',
+    bigImage: '/images/home/section4_item3_bg.png',
     website: '',
     community: {
       facebook: '',
@@ -62,7 +65,8 @@ const list =
     language: 'English',
     title: 'WE ARE THE NEW SHERIFF IN TOWN',
     desc: 'Good Games Guild is a Gaming Hub that aims to create the largest virtual world economy by optimizing its owned assets to get maximum reward generated.',
-    imgUrl: '/images/home/section4_item4_bg.png',
+    smallImage: '/images/home/section4_item4_bg.png',
+    bigImage: '/images/home/section4_item4_bg.png',
     website: '',
     community: {
       telegram: '',
@@ -78,7 +82,8 @@ const list =
     language: 'English',
     title: 'guild for play-to-earn games',
     desc: 'Earn Guild is a play-to-earn guild. Play-to-earn games are skill-based blockchain games where players earn crypto tokens when they win. We support players of play-to-earn games so that they can earn more.',
-    imgUrl: '/images/home/section4_item5_bg.png',
+    smallImage: '/images/home/section4_item5_bg.png',
+    bigImage: '/images/home/section4_item5_bg.png',
     website: '',
     community: {
       telegram: '',
@@ -94,7 +99,8 @@ const list =
     language: 'English',
     title: 'BUILD YOUR GUILD',
     desc: 'A simple integrated platform to build a guild, access a global pool of trained players and manage team performance autonomously.',
-    imgUrl: '/images/home/section4_item6_bg.png',
+    smallImage: '/images/home/section4_item6_bg.png',
+    bigImage: '/images/home/section4_item6_bg.png',
     website: '',
     community: {
       telegram: '',
@@ -104,6 +110,15 @@ const list =
   },
 ]
 const initGsap = (gsap, ScrollTrigger) => {
+  gsap.utils.toArray('.home-section-4').forEach(line => {
+    ScrollTrigger.create({
+      trigger: line,
+      toggleClass: 'animateOnEvent',
+      start: 'top 80%',
+      end: 'top -200%',
+      // markers: true,
+    })
+  })
 }
 useInitGsap(initGsap)
 
@@ -147,23 +162,27 @@ const handleNext = () => {
 </script>
 
 <template>
-  <section class="home-section-4">
+  <section class="home-section-4" id="section4">
     <div class="container">
       <div class="big-img-box">
-        <img class="img" :src="currentItem.imgUrl" alt="">
+        <img class="img" :src="currentItem.bigImage" alt="">
         <div class="content">
           <div class="title">Guild List</div>
+          <div class="control">
+            <svg-icon class="icon" name="left" @click="handlePrev"></svg-icon>
+            <svg-icon class="icon" name="right" @click="handleNext"></svg-icon>
+          </div>
         </div>
       </div>
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="item in list" :key="item.id">
-            <img class="img" :src="item.imgUrl" alt="">
+            <img class="img" :src="item.smallImage" alt="">
           </div>
         </div>
       </div>
       <div class="info-box">
-        <div class="card">
+        <div class="card fromLeft do ae-3">
           <div class="card-title">INFO</div>
           <div class="card-content">
             <div class="list">
@@ -185,7 +204,7 @@ const handleNext = () => {
             <a class="btn" :href="currentItem.website">webset</a>
           </div>
         </div>
-        <div class="card">
+        <div class="card fromLeft do ae-5">
           <div class="card-title">{{currentItem.title}}</div>
           <div class="card-content">
             <div class="desc">{{currentItem.desc}}</div>
@@ -198,10 +217,6 @@ const handleNext = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div class="footer">
-        <svg-icon class="icon" name="left" @click="handlePrev"></svg-icon>
-        <svg-icon class="icon" name="right" @click="handleNext"></svg-icon>
       </div>
     </div>
   </section>
@@ -222,7 +237,7 @@ const handleNext = () => {
 
     .big-img-box {
       position: relative;
-      width: 100vw;
+      width: 100%;
 
       .img {
         display: block;
@@ -235,15 +250,13 @@ const handleNext = () => {
         left: 50%;
         box-sizing: border-box;
         width: 100%;
-        max-width: 1200px;
         height: 100%;
-        padding: 200px;
         transform: translateX(-50%);
 
         .title {
           position: absolute;
-          bottom: 30%;
-          left: 0;
+          bottom: 20%;
+          left: 100px;
           font-family: Mackay Test;
           font-size: 107px;
           font-style: normal;
@@ -251,6 +264,25 @@ const handleNext = () => {
           line-height: 118px;
           text-align: left;
           letter-spacing: .05em;
+        }
+      }
+
+      .control {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 30px;
+        transform: translateY(-50%);
+
+        .icon {
+          width: 64px;
+          height: 64px;
+          cursor: pointer;
         }
       }
     }
@@ -425,20 +457,6 @@ const handleNext = () => {
             }
           }
         }
-      }
-    }
-
-    .footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      margin-top: 70px;
-
-      .icon {
-        width: 64px;
-        height: 64px;
-        cursor: pointer;
       }
     }
   }

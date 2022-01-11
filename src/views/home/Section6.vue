@@ -3,6 +3,15 @@ import { computed, ref } from 'vue'
 import useInitGsap from '@/hooks/useInitGsap'
 
 const initGsap = (gsap, ScrollTrigger) => {
+  gsap.utils.toArray('.home-section-6').forEach(line => {
+    ScrollTrigger.create({
+      trigger: line,
+      toggleClass: 'animateOnEvent',
+      start: 'top 80%',
+      end: 'top -200%',
+      // markers: true,
+    })
+  })
 }
 useInitGsap(initGsap)
 
@@ -33,19 +42,20 @@ const handleRight = () => {
 const progressleft = computed(() => {
   return currentMonthIndex.value * 14.285 + '%'
 })
+
 </script>
 
 <template>
-  <section class="home-section-6">
+  <section class="home-section-6" id="section6">
     <div class="container">
       <h1 class="section-title">
-        Join The AGA’s <br>
-        Monthly Meetings
+        <span class="fromLeft ae-2 do">Join The AGA’s </span> <br>
+        <span class="fromLeft ae-3 do">Monthly Meetings</span>
       </h1>
       <div class="big-img-box">
         <div class="header">
           <svg-img class="logo" name="logo-text"></svg-img>
-          <svg-icon class="icon" name="right" @click="handleRight"></svg-icon>
+          <!-- <svg-icon class="icon" name="right" @click="handleRight"></svg-icon> -->
         </div>
         <div class="middle">
           <div class="text">{{monthInfo.title}}</div>
@@ -55,7 +65,7 @@ const progressleft = computed(() => {
           <div class="progress"></div>
         </div>
       </div>
-      <div class="content-title">
+      <!-- <div class="content-title">
         <span>RELEASE DATE:</span>
         <span>MEETINGS:</span>
         <span>Sign up</span>
@@ -69,9 +79,11 @@ const progressleft = computed(() => {
         </div>
 
         <div class="item" v-for="(item, index) in list" :class="{active: currentMonthIndex === index}" :key="item.id"
-          @click="handleMonthChange(index)"
-        ><span>{{item.monthShort}}.</span></div>
-      </div>
+          @click="handleMonthChange(index)">
+            <span>{{item.monthShort}}.</span>
+        </div>
+      </div> -->
+
     </div>
   </section>
 </template>

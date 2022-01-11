@@ -3,7 +3,8 @@
     <div class="header-left">
       <svg-img class="logo-img" name="logo-text"></svg-img>
       <div class="menu">
-        <div v-for="item in menuList" :key="item.id" class="menu-item" :class="{'active': routeName === item.routeName}">{{item.title}}</div>
+        <div v-for="(item, index) in menuList" :key="item.id" class="menu-item" :class="{'active': currentMenuIndex === index}"
+          @click="goPagePosition(item)">{{item.title}}</div>
       </div>
     </div>
     <div class="header-right">
@@ -13,7 +14,7 @@
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import useInitGsap from '@/hooks/useInitGsap'
 
@@ -30,25 +31,28 @@ const initGsap = (gsap, ScrollTrigger) => {
 }
 useInitGsap(initGsap)
 
+const currentMenuIndex = ref(0)
 const menuList = [
-  { id: 1, title: 'HOME', routeName: 'Home', href: '' },
-  { id: 2, title: 'STORE', routeName: '', href: '' },
-  { id: 3, title: 'NEWS', routeName: '', href: '' },
-  { id: 4, title: 'SERVICE', routeName: '', href: '' },
-  { id: 5, title: 'ABOUT', routeName: '', href: '' },
+  { id: 1, title: 'HOME', target: 'section1' },
+  { id: 2, title: 'STORE', target: 'section2' },
+  { id: 3, title: 'NEWS', target: 'section3' },
+  { id: 4, title: 'SERVICE', target: 'section5' },
+  { id: 5, title: 'ABOUT', target: 'section7' },
 ]
 
-const route = useRoute()
-const routeName = computed(() => {
-  return route.name
-})
-
-const mouseleaveHandler = () => {
+const scrollToTarget = (target) => {
+  window.scrollTo({
+    top: target,
+    behavior: 'smooth',
+  })
+}
+const goPagePosition = (item) => {
+  const { target } = item
+  const top = document.querySelector('#' + target).offsetTop
+  scrollToTarget(top)
+  currentMenuIndex.value = item.id - 1
 }
 
-onMounted(() => {
-  mouseleaveHandler()
-})
 </script>
 
 <style lang="scss">

@@ -1,18 +1,31 @@
 <template>
-  <section class="home-section-1" @mousemove="mousemoveHandler">
+  <section class="home-section-1" @mousemove="mousemoveHandler" id="section1">
     <div class="container">
       <div class="line"></div>
       <div class="title">
-        <h1>Arche Guilds</h1>
-        <h1>Alliance</h1>
+        <h1 class="fromLeft ae-3 do">Arche Guilds</h1>
+        <h1 class="fromLeft ae-5 do">Alliance</h1>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-const style = ref('')
+import useInitGsap from '@/hooks/useInitGsap'
+
+const initGsap = (gsap, ScrollTrigger) => {
+  gsap.utils.toArray('.home-section-1').forEach(line => {
+    ScrollTrigger.create({
+      trigger: line,
+      toggleClass: 'animateOnEvent',
+      start: 'top 80%',
+      end: 'top -200%',
+      // markers: true,
+    })
+  })
+}
+useInitGsap(initGsap)
+
 const mousemoveHandler = (e) => {
   // console.log('window.innerWidth', window.innerWidth)
   // console.log('e.pageX', e.pageX)
