@@ -28,7 +28,7 @@ jobs:
       run: npm install pnpm -g
 
     - name: 'Step 4: Install'
-      run: pnpm install
+      run: pnpm install --no-frozen-lockfile
 
     # - name: 'Step 5: Create Language File'
     #   run: pnpm lang
