@@ -5,7 +5,7 @@ name: Deploy Release CI
 
 on:
   push:
-    branches: [ release-aga ]
+    branches: [ release ]
 
 jobs:
   build:
@@ -36,13 +36,13 @@ jobs:
     - name: 'Step 6: Build Code'
       run: pnpm build:release
 
-    # - name: 'Step 7: Deploy to release server'
-    #     uses: easingthemes/ssh-deploy@main
-    #     env:
-    #       SSH_PRIVATE_KEY: ${{ secrets.RELEASE_AGA_KEY }}
-    #       REMOTE_HOST: xxx.xxx.xxx
-    #       REMOTE_PORT: xx
-    #       REMOTE_USER: frontend
-    #       TARGET: '/www/wwwroot/xxx.arche.network'
-    #       ARGS: "-rltgoDzvO"
-    #       SOURCE: "dist/aga"
+    - name: 'Step 7: Deploy to release server'
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.RELEASE__KEY }}
+          REMOTE_HOST: ${{ secrets.RELEASE_HOST }}
+          REMOTE_PORT: ${{ secrets.RELEASE_PORT }}
+          REMOTE_USER: ${{ secrets.RELEASE_USER }}
+          TARGET: ${{ secrets.RELEASE_TARGET }}
+          ARGS: "-rltgoDzvO"
+          SOURCE: dist/
