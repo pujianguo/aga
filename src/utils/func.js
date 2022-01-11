@@ -4,7 +4,7 @@
  * @Date: 2021-12-19 18:19:30
  */
 /**
- * 是否为移动端
+ * is mobile
  * @param value
  * @returns {boolean}
  */

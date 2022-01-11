@@ -13,16 +13,16 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-informational.svg)](https://github.com/standard/standard/blob/master/docs/README-zhcn.md)
 [![Author](https://img.shields.io/badge/author-Archer-orange.svg)](https://github.com/ArcheWeb)
 
-# 打包运行
-1. 安装依赖
+# Run And Build
+1. Install
 ```
 pnpm install
 ```
-2. 运行开发环境
+2. Run Development
 ```
 pnpm dev
 ```
-3. 上线部署
+3. Build And Release
 ```
 make release
 ```

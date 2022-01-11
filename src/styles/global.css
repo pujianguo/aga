@@ -14,19 +14,16 @@ body {
     Arial,
     "Hiragino Sans GB",
     "Microsoft YaHei",
-    微软雅黑,
     SimSun,
-    宋体,
     Heiti,
-    黑体,
     sans-serif;
   font-size: 14px;
   font-weight: normal;
   letter-spacing: 0;
-  user-select: none; /* 火狐 */
-  user-select: none; /* webkit浏览器 */
-  user-select: none; /* IE10 */
-  user-select: none; /* 早期浏览器 */
+  user-select: none;
+  user-select: none;
+  user-select: none;
+  user-select: none;
   user-select: none;
   background: #000;
 

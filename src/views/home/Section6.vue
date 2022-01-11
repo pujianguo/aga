@@ -7,7 +7,7 @@ const initGsap = (gsap, ScrollTrigger) => {
 useInitGsap(initGsap)
 
 const currentMonthIndex = ref(0)
-// TODO: info数据
+// TODO: info data
 const list = [
   { id: 1, month: 'January', monthShort: 'Jan', title: 'AGA Member Club Developer Forum', info: 'Together in the collective building of future Metaverse.' },
   { id: 2, month: 'February', monthShort: 'Feb', title: 'AGA Member Club Developer Forum', info: 'Together in the collective building of future Metaverse.' },

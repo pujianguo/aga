@@ -1,5 +1,5 @@
 /*
- * @Descripttion: 注册全局组件
+ * @Descripttion:
  * @Author: pujianguo
  * @Date: 2021-12-13 09:58:48
  */
