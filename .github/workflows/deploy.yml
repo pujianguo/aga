@@ -37,12 +37,12 @@ jobs:
       run: pnpm build:release
 
     - name: 'Step 7: Deploy to release server'
-        uses: easingthemes/ssh-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.RELEASE__KEY }}
-          REMOTE_HOST: ${{ secrets.RELEASE_HOST }}
-          REMOTE_PORT: ${{ secrets.RELEASE_PORT }}
-          REMOTE_USER: ${{ secrets.RELEASE_USER }}
-          TARGET: ${{ secrets.RELEASE_TARGET }}
-          ARGS: "-rltgoDzvO"
-          SOURCE: dist/
+      uses: easingthemes/ssh-deploy@main
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.RELEASE_KEY }}
+        REMOTE_PORT: ${{ secrets.RELEASE_PORT }}
+        REMOTE_HOST: ${{ secrets.RELEASE_HOST }}
+        REMOTE_USER: ${{ secrets.RELEASE_USER }}
+        TARGET: ${{ secrets.RELEASE_TARGET }}
+        ARGS: "-rltgoDzvO"
+        SOURCE: "dist/"
