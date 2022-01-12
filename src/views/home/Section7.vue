@@ -30,7 +30,7 @@ useInitGsap(initGsap)
           </div>
         </div>
       </div>
-      <div class="card fromLeft ae-2 do">
+      <!-- <div class="card fromLeft ae-2 do">
         <div class="card-title">
           <span>About us</span>
         </div>
@@ -42,6 +42,14 @@ useInitGsap(initGsap)
             <div class="list-item">Contact us</div>
           </div>
         </div>
+      </div> -->
+      <div class="card fromLeft ae-2 do">
+        <div class="card-title">
+          <span>Join us</span>
+        </div>
+        <div class="card-content">
+          <a class="join fromRight ae-7 do" href="https://archenetwork.typeform.com/AGAAPPLY" target="_blank">Join AGA</a>
+        </div>
       </div>
       <div class="card fromLeft ae-3 do">
         <div class="card-title">
@@ -49,16 +57,16 @@ useInitGsap(initGsap)
         </div>
         <div class="card-content">
           <div class="contact-list">
-            <a href="">
+            <!-- <a href="">
               <svg-img class="icon" name="facebook"></svg-img>
-            </a>
-            <a href="">
-              <svg-img class="icon" name="telegram"></svg-img>
-            </a>
-            <a href="">
+            </a> -->
+            <a href="https://twitter.com/AGAMetaverse" target="_blank">
               <svg-img class="icon" name="twitter"></svg-img>
             </a>
-            <a href="">
+            <a href="https://t.me/ArcheNetwork" target="_blank">
+              <svg-img class="icon" name="telegram"></svg-img>
+            </a>
+            <a href="https://discord.com/invite/ah8h2sqF2B" target="_blank">
               <svg-img class="icon" name="discord"></svg-img>
             </a>
           </div>
@@ -71,7 +79,7 @@ useInitGsap(initGsap)
 
 <style lang="scss">
 .home-section-7 {
-  margin-top: 300px;
+  margin-top: 80px;
 
   .container {
     display: flex;
@@ -81,7 +89,7 @@ useInitGsap(initGsap)
     padding: 0 20px;
 
     .card {
-      margin: 0 30px 50px;
+      margin: 0 0 50px;
 
       &:nth-child(3) {
         margin-bottom: 144px;
@@ -94,7 +102,6 @@ useInitGsap(initGsap)
         }
 
         span {
-          font-family: Futura;
           font-size: 20px;
           font-style: normal;
           font-weight: 700;
@@ -108,9 +115,36 @@ useInitGsap(initGsap)
       .card-content {
         margin-top: 35px;
 
+        .join {
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          width: fit-content;
+          height: fit-content;
+          padding: 10px 30px;
+          margin-top: 30px;
+          font-family: Mackay Test;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 26px;
+          color: #fff;
+          text-align: right;
+          letter-spacing: .05em;
+          white-space: nowrap;
+          border: 1px solid #fff;
+          border-radius: 9px;
+          transition: all .25s;
+
+          &:hover {
+            color: #000;
+            background: #fff;
+          }
+        }
+
         .info {
           max-width: 380px;
-          font-family: Futura;
           font-size: 20px;
           font-style: normal;
           font-weight: 500;
@@ -120,7 +154,6 @@ useInitGsap(initGsap)
 
         .list {
           .list-item {
-            font-family: Futura;
             font-size: 20px;
             font-style: normal;
             font-weight: 500;
@@ -156,7 +189,7 @@ useInitGsap(initGsap)
 
 .page-footer {
   width: 100%;
-  height: 85px;
+  height: 10px;
   background: rgb(121 66 247 / 100%);
 }
 

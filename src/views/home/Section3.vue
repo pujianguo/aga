@@ -36,8 +36,8 @@ onMounted(() => {
 const list = [
   { id: 1, title: 'Latest and Top Games Offering', desc: 'Arche have the latest game connection and information and share the information such as the game strategy to the guilds that allows them to join the game in early stage.', imgUrl: '/images/home/section3_item1_bg.png' },
   { id: 2, title: 'Launchpad Whitelist', desc: 'Can get whitelisted from Game Asset Offerings for Guilds that support Games in the early stage or invested in.', imgUrl: '/images/home/section3_item2_bg.png' },
-  { id: 3, title: 'Listed inArche Network', desc: 'The guilds logo will be shown below the games that they participate in, that allows more people to enter the guilds when they wanna join the game.', imgUrl: '/images/home/section3_item3_bg.png' },
-  { id: 4, title: 'MORE OPPORTUNITIES', desc: 'When a projects want to do promotion, they could submit their event detail to Arche and we will deliver the event information to the Guilds in AGA. And the Guilds community could get the exclusive incentive.', imgUrl: '/images/home/section3_item4_bg.png' },
+  { id: 3, title: 'Listed in Arche Network', desc: 'The Guilds logo will be shown below the games that they participate in, that allows more people to enter the guilds when they wanna join the game.', imgUrl: '/images/home/section3_item3_bg.png' },
+  { id: 4, title: 'More Incentive', desc: 'When a projects want to do promotion, they could submit their event detail to Arche and we will deliver the event information to the Guilds in AGA. And the Guilds community could get the exclusive incentive.', imgUrl: '/images/home/section3_item4_bg.png' },
 ]
 const currentIndex = ref(0)
 const currentItem = computed(() => {
@@ -58,8 +58,26 @@ const handleNext = () => {
   <section class="home-section-3" id="section3">
     <div class="container">
       <h1 class="title fromLeft ae-1 do">Why Join The AGA</h1>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="item in list" :key="item.id"
+            :style="{'--url': `url(${item.imgUrl})`}"
+            >
+              <img class="bg-img" :src="item.imgUrl" alt="">
+              <div class="content">{{item.desc}}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="line"></div>
+      <div class="footer">
+        <svg-icon class="icon" name="left" @click="handlePrev"></svg-icon>
+        <div class="btn">{{currentItem.title}}</div>
+        <svg-icon class="icon" name="right" @click="handleNext"></svg-icon>
+      </div>
       <div class="menu">
         <div class="line-box fromLeft ae-2 do">
+          <div class="item"></div>
           <div class="item"></div>
           <div class="item"></div>
           <div class="item"></div>
@@ -78,22 +96,6 @@ const handleNext = () => {
           <!-- <svg-icon class="last-icon" name="plus"></svg-icon> -->
         </div>
       </div>
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="item in list" :key="item.id"
-            :style="{'--url': `url(${item.imgUrl})`}"
-            >
-              <img class="bg-img" :src="item.imgUrl" alt="">
-              <div class="content">{{item.desc}}</div>
-          </div>
-        </div>
-      </div>
-      <div class="line"></div>
-      <div class="footer">
-        <svg-icon class="icon" name="left" @click="handlePrev"></svg-icon>
-        <div class="btn">{{currentItem.title}}</div>
-        <svg-icon class="icon" name="right" @click="handleNext"></svg-icon>
-      </div>
     </div>
   </section>
 </template>
@@ -108,12 +110,13 @@ const handleNext = () => {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 100%;
-    padding: 90px 20px 200px;
+    height: 940px !important;
+    min-height: 940px !important;
+    padding: 90px 20px 100px;
 
     .title {
       align-self: flex-end;
-      margin-bottom: 147px;
+      margin-bottom: 80px;
       font-family: Mackay Test;
       font-size: 60px;
       font-style: normal;
@@ -131,15 +134,15 @@ const handleNext = () => {
         box-sizing: border-box;
         display: flex;
         width: 100%;
-        height: 32px;
-        margin-bottom: 45px;
-        border: 1.5px solid #fff;
+        height: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #fff;
         border-bottom: 0;
 
         .item {
           flex: 1;
-          height: 32px;
-          border-right: 1.5px solid #fff;
+          height: 12px;
+          border-right: 1px solid #fff;
 
           &:last-child {
             border: 0;
@@ -152,35 +155,37 @@ const handleNext = () => {
         display: flex;
         align-items: center;
         width: 100%;
+        padding-left: 20%;
 
         .item {
           position: relative;
-          flex: 1;
+          width: calc(100% / 5);
           cursor: pointer;
-          opacity: .4;
+          opacity: .3;
+          transition: all .3s;
 
           .item-icon {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
+            margin-left: -4px;
 
             .icon-ball {
-              width: 30px;
-              height: 30px;
+              width: 20px;
+              height: 20px;
             }
           }
 
           .item-text {
-            max-width: 200px;
-            margin-top: 16px;
-            font-family: Futura;
-            font-size: 20px;
+            max-width: 160px;
+            margin-top: 10px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 500;
-            line-height: 32px;
+            line-height: 1.4;
             color: #fff;
             text-transform: uppercase;
             mix-blend-mode: normal;
@@ -208,8 +213,8 @@ const handleNext = () => {
                 }
 
                 &:nth-child(3) {
-                  bottom: 28px;
-                  left: 15px;
+                  bottom: 17px;
+                  left: 10px;
                 }
               }
             }
@@ -229,9 +234,9 @@ const handleNext = () => {
 
     .swiper-container {
       position: relative;
-      width: 150vw;
-      height: 425px;
-      margin-top: 194px;
+      width: 100vw;
+      height: 300px;
+      margin-top: 0;
 
       .swiper-wrapper {
         .swiper-slide {
@@ -271,24 +276,25 @@ const handleNext = () => {
             z-index: 1;
             box-sizing: border-box;
             display: flex;
-            display: none;
             align-items: center;
             justify-content: center;
             max-width: 630px;
             height: 200px;
-            padding: 26px 80px;
+            padding: 5% 10%;
             margin: 0 50px;
-            font-family: Futura;
-            font-size: 20px;
+            font-size: 14px;
             font-style: normal;
             font-weight: 500;
-            line-height: 32px;
-            color: #fff;
+            line-height: 1.6;
+            color: rgb(255 255 255 / 70%);
             text-align: center;
-            background: #404040;
+            background: rgb(0 0 0 / 50%);
             border-radius: 100px;
             mix-blend-mode: normal;
-            opacity: .7;
+            opacity: 0;
+            transition: all .3s;
+            transform: scale(.8);
+            backdrop-filter: blur(10px);
           }
         }
 
@@ -298,15 +304,19 @@ const handleNext = () => {
           transform: scale(1);
 
           .content {
-            display: flex;
+            opacity: 1;
+            transform: scale(1);
           }
         }
       }
     }
 
     .line {
+      position: relative;
+      top: -40px;
+      z-index: 99;
       width: 1px;
-      height: 148px;
+      height: 80px;
       margin: 0 auto;
       background: #fff;
     }
@@ -316,7 +326,8 @@ const handleNext = () => {
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      margin-top: 16px;
+      margin-top: -20px;
+      margin-bottom: 60px;
 
       .icon {
         width: 64px;
@@ -328,7 +339,6 @@ const handleNext = () => {
         position: relative;
         height: 60px;
         padding: 0 20px;
-        font-family: Futura;
         font-size: 25px;
         font-style: normal;
         font-weight: bold;

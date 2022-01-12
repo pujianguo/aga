@@ -91,6 +91,7 @@ const progressleft = computed(() => {
 <style lang="scss">
 .home-section-6 {
   .container {
+    min-height: auto !important;
     padding: 100px 20px;
 
     .section-title {
@@ -104,7 +105,7 @@ const progressleft = computed(() => {
       width: 100%;
       height: 384px;
       padding: 40px 50px;
-      margin-top: 179px;
+      margin-top: 80px;
       background: url("/images/home/section6_box_bg.png") no-repeat center / cover;
       border-radius: 20px;
 
@@ -173,7 +174,6 @@ const progressleft = computed(() => {
         justify-content: space-between;
 
         .month {
-          font-family: Futura;
           font-size: 20px;
           font-style: normal;
           font-weight: 500;
@@ -214,7 +214,6 @@ const progressleft = computed(() => {
       margin-bottom: 30px;
 
       span {
-        font-family: Futura;
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
@@ -275,7 +274,6 @@ const progressleft = computed(() => {
 
         .info {
           max-width: 280px;
-          font-family: Futura;
           font-size: 20px;
           font-style: normal;
           font-weight: 500;
@@ -287,7 +285,6 @@ const progressleft = computed(() => {
 
         .info-title {
           margin-top: 43px;
-          font-family: Futura;
           font-size: 20px;
           font-style: normal;
           font-weight: 500;
@@ -299,7 +296,6 @@ const progressleft = computed(() => {
         }
 
         span {
-          font-family: Futura;
           font-size: 20px;
           font-style: normal;
           font-weight: 500;

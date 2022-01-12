@@ -35,11 +35,11 @@ useInitGsap(initGsap)
 
 const list = [
   { id: 1, title: 'Fund and NFT', desc: 'Raise Fund and NFT <br> By publish your requests' },
-  { id: 2, title: 'Education <br> Task', desc: 'Example：Get 180 SLP <br> From Axie in 3 day. <br> Bonus provided by AGA.' },
-  { id: 3, title: 'Game Strategy <br> Task', desc: 'Example：Describe your strategy <br> In Mir4 and attach a ROI. <br>  Bonus provided by AGA.' },
-  { id: 4, title: 'Medal of <br> Achievement', desc: 'Unlock guild achievement <br> Badges and get special benefits <br> To help the community.' },
-  { id: 5, title: 'Recruit <br> Player', desc: 'Post recruiting player programs <br> And offer incentives. ' },
-  { id: 6, title: 'E-sports eventsand <br> reward', desc: 'Hold e-sports events <br> And discover all <br> The possibilities of games.' },
+  { id: 2, title: 'Education Task', desc: 'Example：Get 180 SLP <br> From Axie in 3 day. <br> Bonus provided by AGA.' },
+  { id: 3, title: 'Game Strategy Task', desc: 'Example：Describe your strategy <br> In Mir4 and attach a ROI. <br>  Bonus provided by AGA.' },
+  { id: 4, title: 'Medal of Achievement', desc: 'Unlock guild achievement <br> Badges and get special benefits <br> To help the community.' },
+  { id: 5, title: 'Recruit Player', desc: 'Post recruiting player programs <br> And offer incentives. ' },
+  { id: 6, title: 'E-sports eventsand reward', desc: 'Hold e-sports events <br> And discover all <br> The possibilities of games.' },
 ]
 </script>
 
@@ -55,20 +55,22 @@ const list = [
     .content {
       display: flex;
       flex-wrap: wrap;
+      gap: 40px;
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      margin-top: 156px;
+      margin-top: 80px;
 
       .item {
         position: relative;
         box-sizing: border-box;
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        width: 346px;
+        width: calc((100% - 80px) / 3);
         height: 384px;
-        padding-top: 16px;
-        margin-bottom: 55px;
+        padding-top: 20px;
+        margin-bottom: 0;
         overflow: hidden;
         background: rgb(64 64 64 / 50%);
         border-radius: 20px;
@@ -159,11 +161,12 @@ const list = [
           justify-content: center;
           width: 100%;
           height: 80px;
-          font-family: Futura;
-          font-size: 25px;
+          padding-right: 20px;
+          padding-left: 20px;
+          font-size: 20px;
           font-style: normal;
-          font-weight: bold;
-          line-height: 40px;
+          font-weight: 800;
+          line-height: 1.4;
           color: #fff;
           text-align: center;
           text-transform: uppercase;
@@ -171,7 +174,6 @@ const list = [
 
         .item-desc {
           margin-top: 28px;
-          font-family: Futura;
           font-size: 20px;
           font-style: normal;
           font-weight: 500;

@@ -21,11 +21,9 @@ body {
   font-weight: normal;
   letter-spacing: 0;
   user-select: none;
-  user-select: none;
-  user-select: none;
-  user-select: none;
-  user-select: none;
   background: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   @media screen and (min-width: 1200px) {
     min-width: 1200px;
@@ -100,6 +98,29 @@ button {
 }
 
 /**************** FONT FAMILY ***************/
+
+/* -------------------------------------------------------
+MackayDEMO font.
+------------------------------------------------------- */
+@font-face {
+  font-family: "Mackay Test";
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url("https://media.arche.network/arche2.0/fonts/MackayDEMORegular.woff2") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/MackayDEMORegular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mackay Test";
+  font-style: normal;
+  font-weight: bold;
+  src:
+    url("https://media.arche.network/arche2.0/fonts/MackayDEMOBold.woff2") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/MackayDEMOBold.woff") format("woff");
+  font-display: swap;
+}
 
 /* -------------------------------------------------------
 Cindie Mono font.

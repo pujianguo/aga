@@ -54,10 +54,12 @@ useInitGsap(initGsap)
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    gap: 40px;
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 90px 20px 200px;
+    min-height: auto !important;
+    padding: 90px 20px 100px;
 
     .title {
       font-family: Mackay Test;
@@ -97,7 +99,6 @@ useInitGsap(initGsap)
 
           h2 {
             margin-bottom: 24px;
-            font-family: Futura;
             font-size: 25px;
             font-style: normal;
             font-weight: 700;
@@ -106,7 +107,6 @@ useInitGsap(initGsap)
           }
 
           p {
-            font-family: Futura;
             font-size: 20px;
             font-style: normal;
             font-weight: 500;

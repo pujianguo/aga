@@ -28,6 +28,28 @@ import Section7 from './Section7.vue'
   color: #fff;
   background: #000;
 
+  &::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 15vw;
+    height: 100vh;
+    content: "";
+    background: linear-gradient(90deg, rgb(0 0 0 / 100%) 0%, rgb(0 0 0 / 0%) 100%);
+  }
+
+  &::after {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    width: 15vw;
+    height: 100vh;
+    content: "";
+    background: linear-gradient(-90deg, rgb(0 0 0 / 100%) 0%, rgb(0 0 0 / 0%) 100%);
+  }
+
   section {
     width: 100%;
 

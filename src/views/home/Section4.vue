@@ -12,14 +12,12 @@ const list =
     language: 'English',
     title: 'First subDAO of YieldGuild',
     desc: 'First subDAO of YieldGuild. Our mission is to create the biggest and most sustainable Play-To-Earn virtual economy focused on South East Asia.',
-    smallImage: '/images/home/section4_item1_bg.png',
-    bigImage: '/images/home/section4_item1_bg.png',
-    website: '',
+    smallImage: 'https://media.arche.network/arche2.0/images/aga/aga-guilds-01.png',
+    bigImage: 'https://media.arche.network/arche2.0/images/aga/aga-guilds-01b.png',
+    website: 'https://yggsea.io/',
     community: {
-      discord: '',
-      twitter: '',
-      youtube: '',
-      subtract: '',
+      discord: 'https://discord.com/invite/yggsea',
+      twitter: 'http://twitter.com/yggsea',
     },
   },
   {
@@ -29,14 +27,12 @@ const list =
     language: 'English',
     title: 'YGG IS A PLAY-TO-EARN GAMING GUILD',
     desc: 'YGG IS A PLAY-TO-EARN GAMING GUILD, BRINGING PLAYERS TOGETHER TO EARN VIA BLOCKCHAIN-BASED ECONOMIES. We ARE THE SETTLERS OF NEW WORLDS IN THE METAVERSE.',
-    smallImage: '/images/home/section4_item2_bg.png',
-    bigImage: '/images/home/section4_item2_bg.png',
-    website: '',
+    smallImage: 'https://media.arche.network/arche2.0/images/aga/aga-guilds-02.png',
+    bigImage: 'https://media.arche.network/arche2.0/images/aga/aga-guilds-02b.png',
+    website: 'https://yieldguild.io/',
     community: {
-      discord: '',
-      twitter: '',
-      medium: '',
-      union: '',
+      discord: 'https://discord.com/invite/AWSVhfkVXG',
+      twitter: 'https://twitter.com/yieldguild',
     },
   },
   {
@@ -46,16 +42,12 @@ const list =
     language: 'English',
     title: 'A collection of contributors',
     desc: 'Avocado DAO (Decentralized Autonomous Organization) is a collection of contributors that believe in the benefits of blockchain technologies and the metaverse.',
-    smallImage: '/images/home/section4_item3_bg.png',
-    bigImage: '/images/home/section4_item3_bg.png',
-    website: '',
+    smallImage: 'https://media.arche.network/arche2.0/images/aga/aga-guilds-03.png',
+    bigImage: 'https://media.arche.network/arche2.0/images/aga/aga-guilds-03b.png',
+    website: 'https://www.avocadodao.io/',
     community: {
-      facebook: '',
-      telegram: '',
-      youtube: '',
-      twitter: '',
-      discord: '',
-      medium: '',
+      discord: 'https://discord.com/invite/avocadoguild',
+      twitter: 'https://twitter.com/avocadoguild',
     },
   },
   {
@@ -65,14 +57,12 @@ const list =
     language: 'English',
     title: 'WE ARE THE NEW SHERIFF IN TOWN',
     desc: 'Good Games Guild is a Gaming Hub that aims to create the largest virtual world economy by optimizing its owned assets to get maximum reward generated.',
-    smallImage: '/images/home/section4_item4_bg.png',
-    bigImage: '/images/home/section4_item4_bg.png',
-    website: '',
+    smallImage: 'https://media.arche.network/arche2.0/images/aga/aga-guilds-04.png',
+    bigImage: 'https://media.arche.network/arche2.0/images/aga/aga-guilds-04b.png',
+    website: 'https://goodgamesguild.com/',
     community: {
-      telegram: '',
-      discord: '',
-      twitter: '',
-      medium: '',
+      discord: 'https://discord.com/invite/x47U9qkR5K',
+      twitter: 'https://twitter.com/goodgamesguild',
     },
   },
   {
@@ -82,14 +72,12 @@ const list =
     language: 'English',
     title: 'guild for play-to-earn games',
     desc: 'Earn Guild is a play-to-earn guild. Play-to-earn games are skill-based blockchain games where players earn crypto tokens when they win. We support players of play-to-earn games so that they can earn more.',
-    smallImage: '/images/home/section4_item5_bg.png',
-    bigImage: '/images/home/section4_item5_bg.png',
-    website: '',
+    smallImage: 'https://media.arche.network/arche2.0/images/aga/aga-guilds-05.png',
+    bigImage: 'https://media.arche.network/arche2.0/images/aga/aga-guilds-05b.png',
+    website: 'https://www.earnguild.io/',
     community: {
-      telegram: '',
-      discord: '',
-      twitter: '',
-      medium: '',
+      discord: 'https://discord.com/invite/earnguild',
+      twitter: 'https://twitter.com/EarnGuild',
     },
   },
   {
@@ -99,13 +87,12 @@ const list =
     language: 'English',
     title: 'BUILD YOUR GUILD',
     desc: 'A simple integrated platform to build a guild, access a global pool of trained players and manage team performance autonomously.',
-    smallImage: '/images/home/section4_item6_bg.png',
-    bigImage: '/images/home/section4_item6_bg.png',
-    website: '',
+    smallImage: 'https://media.arche.network/arche2.0/images/aga/aga-guilds-06.png',
+    bigImage: 'https://media.arche.network/arche2.0/images/aga/aga-guilds-06b.png',
+    website: 'https://infinityforce.com/',
     community: {
-      telegram: '',
-      discord: '',
-      twitter: '',
+      discord: 'https://discord.com/invite/infinity-force',
+      twitter: 'http://www.twitter.com/infinityforce_',
     },
   },
 ]
@@ -165,7 +152,7 @@ const handleNext = () => {
   <section class="home-section-4" id="section4">
     <div class="container">
       <div class="big-img-box">
-        <img class="img" :src="currentItem.bigImage" alt="">
+        <div class="img-wrap"><img class="img" :src="currentItem.bigImage" alt=""></div>
         <div class="content">
           <div class="title">Guild List</div>
           <div class="control">
@@ -183,7 +170,7 @@ const handleNext = () => {
       </div>
       <div class="info-box">
         <div class="card fromLeft do ae-3">
-          <div class="card-title">INFO</div>
+          <div class="card-title">{{currentItem.name}}</div>
           <div class="card-content">
             <div class="list">
               <div class="list-item">
@@ -201,7 +188,7 @@ const handleNext = () => {
             </div>
           </div>
           <div class="card-footer">
-            <a class="btn" :href="currentItem.website">webset</a>
+            <a class="btn" target="_blank" :href="currentItem.website">WEBSITE</a>
           </div>
         </div>
         <div class="card fromLeft do ae-5">
@@ -211,8 +198,9 @@ const handleNext = () => {
           </div>
           <div class="card-footer">
             <div class="community-list">
-              <a class="item" v-for="(v, k, i) in currentItem.community" :key="i" :href="v">
+              <a class="item" target="_blank" v-for="(v, k, i) in currentItem.community" :key="i" :href="v">
                 <svg-img class="icon" :name="'community_' + k"></svg-img>
+                <span>{{k}}</span>
               </a>
             </div>
           </div>
@@ -233,21 +221,62 @@ const handleNext = () => {
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 90px 20px 200px;
+    padding: 90px 20px 100px;
 
     .big-img-box {
       position: relative;
       width: 100%;
 
-      .img {
-        display: block;
+      .img-wrap {
         width: 100%;
+        height: 100%;
+        animation: imgop 20s linear infinite;
+
+        @keyframes imgop {
+          from {
+            opacity: .6;
+            transform: scale(.9);
+          }
+
+          to {
+            opacity: .8;
+            transform: scale(1.2);
+          }
+        }
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+          width: 100%;
+          height: 100%;
+          content: "";
+          background: linear-gradient(180deg, #000 0%, rgb(0 0 0 / 0%) 16%, rgb(0 0 0 / 0%) 60%, #000 100%);
+        }
+
+        &::after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 0;
+          width: 100%;
+          height: 100%;
+          content: "";
+          background: linear-gradient(90deg, #000 0%, rgb(0 0 0 / 0%) 25%, rgb(0 0 0 / 0%) 75%, #000 100%);
+        }
+
+        .img {
+          display: block;
+          width: 100%;
+        }
       }
 
       .content {
         position: absolute;
         top: 0;
         left: 50%;
+        z-index: 9;
         box-sizing: border-box;
         width: 100%;
         height: 100%;
@@ -255,13 +284,13 @@ const handleNext = () => {
 
         .title {
           position: absolute;
-          bottom: 20%;
-          left: 100px;
+          top: -10px;
+          left: 0;
           font-family: Mackay Test;
-          font-size: 107px;
+          font-size: 60px;
           font-style: normal;
           font-weight: 600;
-          line-height: 118px;
+          line-height: 1;
           text-align: left;
           letter-spacing: .05em;
         }
@@ -276,7 +305,7 @@ const handleNext = () => {
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        padding: 0 30px;
+        padding: 0;
         transform: translateY(-50%);
 
         .icon {
@@ -290,7 +319,7 @@ const handleNext = () => {
     .swiper-container {
       position: relative;
       width: 100vw;
-      margin-top: 97px;
+      margin-top: -80px;
 
       .swiper-wrapper {
         .swiper-slide {
@@ -303,12 +332,21 @@ const handleNext = () => {
           transition: 300ms;
 
           .img {
+            box-sizing: border-box;
             display: block;
             width: 100%;
             height: 100%;
+            padding: 1.5px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
           }
 
           transform: scale(.9);
+        }
+
+        .swiper-slide-active {
+          background: linear-gradient(180deg, rgb(255 255 255 / 75%) 0%, rgb(255 255 255 / 5%) 100%);
+          border-radius: 12px;
         }
 
         .swiper-slide-active,
@@ -325,7 +363,7 @@ const handleNext = () => {
       display: flex;
       justify-content: space-between;
       width: 100%;
-      margin-top: 72px;
+      margin-top: 70px;
       border-top: 1px solid #fff;
 
       &::before {
@@ -333,7 +371,7 @@ const handleNext = () => {
         top: -1px;
         left: 0;
         width: 0;
-        height: 32px;
+        height: 12px;
         content: "";
         border-left: 1px solid #fff;
       }
@@ -343,14 +381,14 @@ const handleNext = () => {
         top: -1px;
         right: 0;
         width: 0;
-        height: 32px;
+        height: 12px;
         content: "";
         border-left: 1px solid #fff;
       }
 
       .card {
         flex: 1;
-        padding-top: 100px;
+        padding-top: 60px;
 
         &:nth-child(1) {
           position: relative;
@@ -360,14 +398,13 @@ const handleNext = () => {
             top: -1px;
             right: 0;
             width: 0;
-            height: 32px;
+            height: 12px;
             content: "";
             border-left: 1px solid #fff;
           }
         }
 
         .card-title {
-          font-family: Futura;
           font-size: 25px;
           font-style: normal;
           font-weight: 700;
@@ -380,7 +417,7 @@ const handleNext = () => {
 
         .card-content {
           height: 110px;
-          margin-top: 35px;
+          margin-top: 20px;
 
           .list {
             width: 100%;
@@ -392,8 +429,7 @@ const handleNext = () => {
 
               .item-label {
                 width: 200px;
-                font-family: Futura;
-                font-size: 20px;
+                font-size: 16px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 32px;
@@ -402,8 +438,7 @@ const handleNext = () => {
               }
 
               .item-value {
-                font-family: Futura;
-                font-size: 20px;
+                font-size: 16px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 32px;
@@ -413,8 +448,7 @@ const handleNext = () => {
           }
 
           .desc {
-            font-family: Futura;
-            font-size: 20px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 500;
             line-height: 32px;
@@ -423,36 +457,58 @@ const handleNext = () => {
         }
 
         .card-footer {
-          margin-top: 78px;
+          margin-top: 40px;
 
           .btn {
             display: block;
-            width: 131px;
-            height: 34px;
-            font-family: Futura;
+            width: 140px;
+            height: 36px;
             font-size: 16px;
             font-style: normal;
-            font-weight: 500;
-            line-height: 34px;
-            color: #fff;
+            font-weight: 800;
+            line-height: 36px;
+            color: rgb(255 255 255 / 100%);
             text-align: center;
-            background: linear-gradient(61.12deg, #7942f7 28.31%, #ffe5fa 79.69%, #fff 94.59%);
+            background: rgb(255 255 255 / 0%);
+            border: 1px solid rgb(255 255 255 / 100%);
             border-radius: 20px;
+            transition: all .3s;
+
+            &:hover {
+              color: rgb(0 0 0 / 100%);
+              background: rgb(255 255 255 / 100%);
+            }
           }
 
           .community-list {
             display: flex;
+            gap: 40px;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start;
 
             .item {
-              display: block;
-              width: 40px;
-              height: 40px;
+              display: flex;
+              gap: 14px;
+              width: 120px;
+              height: 32px;
+              color: #fff;
+
+              &:hover {
+                text-decoration: underline;
+              }
 
               .icon {
-                width: 40px;
-                height: 40px;
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+              }
+
+              span {
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 800;
+                line-height: 32px;
+                text-transform: uppercase;
               }
             }
           }

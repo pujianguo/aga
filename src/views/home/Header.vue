@@ -8,7 +8,9 @@
       </div>
     </div>
     <div class="header-right">
-      <div class="info">2022/SUPPORT</div>
+      <a class="joinbutton" href="https://archenetwork.typeform.com/AGAAPPLY" target="_blank">Join AGA</a>
+      <div class="info">©️ AGA 2022 / <a href="https://arche.network" target="_blank">FOUNDER BY ARCHE</a></div>
+      <!-- <div class="scroll">SCROLL TO EXPLORE</div> -->
     </div>
   </div>
 </template>
@@ -34,10 +36,11 @@ useInitGsap(initGsap)
 const currentMenuIndex = ref(0)
 const menuList = [
   { id: 1, title: 'HOME', target: 'section1' },
-  { id: 2, title: 'STORE', target: 'section2' },
-  { id: 3, title: 'NEWS', target: 'section3' },
-  { id: 4, title: 'SERVICE', target: 'section5' },
-  { id: 5, title: 'ABOUT', target: 'section7' },
+  { id: 2, title: 'ABOUT', target: 'section2' },
+  { id: 3, title: 'STRENGTH', target: 'section3' },
+  { id: 4, title: 'GUILDS', target: 'section4' },
+  { id: 5, title: 'FEATURES', target: 'section5' },
+  { id: 6, title: 'JOIN', target: 'section6' },
 ]
 
 const scrollToTarget = (target) => {
@@ -62,9 +65,9 @@ const goPagePosition = (item) => {
 
   .header-left {
     position: fixed;
-    top: 10vh;
-    bottom: 10vh;
-    left: 60px;
+    top: 4vw;
+    bottom: 4vw;
+    left: 4vw;
     z-index: 100;
 
     .logo-img {
@@ -77,7 +80,6 @@ const goPagePosition = (item) => {
 
       .menu-item {
         margin-top: 58px;
-        font-family: Futura;
         font-size: 15px;
         font-style: normal;
         font-weight: 500;
@@ -110,30 +112,68 @@ const goPagePosition = (item) => {
 
   .header-right {
     position: fixed;
-    top: 10vh;
-    right: 60px;
-    bottom: 10vh;
+    top: 4vw;
+    right: 4vw;
+    bottom: 4vw;
     width: 100px;
+
+    .joinbutton {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: fit-content;
+      font-family: Mackay Test;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 46px;
+      color: #fff;
+      text-align: right;
+      letter-spacing: .05em;
+      white-space: nowrap;
+
+      &::before {
+        position: absolute;
+        right: 1px;
+        bottom: 9px;
+        width: 92%;
+        height: 1px;
+        content: "";
+        background: #fff;
+      }
+    }
 
     .info {
       position: absolute;
-      top: 320px;
       right: 0;
-      font-family: Futura;
-      font-size: 15px;
+      bottom: 6vw;
+      width: fit-content;
+      font-size: 12px;
       font-style: normal;
       font-weight: 500;
-      line-height: 20px;
+      line-height: 1.6;
+      color: #fff;
       letter-spacing: .05em;
-      opacity: .45;
+      white-space: nowrap;
+      opacity: .5;
       transform: rotate(90deg);
       transform-origin: right top;
+
+      a {
+        color: #fff;
+
+        &:hover {
+          text-decoration: underline;
+          opacity: 1;
+        }
+      }
     }
 
     &::before {
       position: absolute;
       top: 0;
       right: 0;
+      display: none;
       width: 20px;
       height: 20px;
       content: "";

@@ -24,7 +24,6 @@ specifiers:
   vite: ^2.7.2
   vite-plugin-svg-icons: ^1.1.0
   vue: ^3.2.25
-  vue-awesome-swiper: ^4.1.1
   vue-router: ^4.0.12
 
 dependencies:
@@ -32,7 +31,6 @@ dependencies:
   pinia: 2.0.9_vue@3.2.26
   swiper: 7.4.1
   vue: 3.2.26
-  vue-awesome-swiper: 4.1.1_swiper@7.4.1+vue@3.2.26
   vue-router: 4.0.12_vue@3.2.26
 
 devDependencies:
@@ -3632,17 +3630,6 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
-
-  /vue-awesome-swiper/4.1.1_swiper@7.4.1+vue@3.2.26:
-    resolution: {integrity: sha512-50um10t6N+lJaORkpwSi1wWuMmBI1sgFc9Znsi5oUykw2cO5DzLaBHcO2JNX21R+Ue4TGoIJDhhxjBHtkFrTEQ==}
-    engines: {node: '>=8'}
-    peerDependencies:
-      swiper: ^5.2.0
-      vue: 2.x
-    dependencies:
-      swiper: 7.4.1
-      vue: 3.2.26
-    dev: false
 
   /vue-demi/0.12.1_vue@3.2.26:
     resolution: {integrity: sha512-QL3ny+wX8c6Xm1/EZylbgzdoDolye+VpCXRhI2hug9dJTP3OUJ3lmiKN3CsVV3mOJKwFi0nsstbgob0vG7aoIw==}
