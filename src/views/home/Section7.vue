@@ -210,8 +210,56 @@ useInitGsap(initGsap)
 
 @media screen and (max-width: 768px) {
   .home-section-7 {
+    margin-top: 80px;
+
     .container {
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+
+      .card {
+        margin: 0 0 40px;
+
+        &:nth-child(3) {
+          margin-bottom: 80px;
+        }
+
+        .card-title {
+          text-align: center;
+        }
+
+        .card-content {
+          margin-top: 20px;
+
+          .join {
+            margin-top: 10px;
+          }
+
+          .info {
+            max-width: 100%;
+            padding: 0 20px;
+            font-size: 14px;
+            line-height: 1.4;
+            text-align: center;
+          }
+
+          .contact-list {
+            a {
+              .icon {
+                width: 28px;
+                height: 28px;
+              }
+            }
+          }
+        }
+      }
     }
+  }
+
+  .page-footer {
+    width: 100%;
+    height: 5px;
+    background: rgb(121 66 247 / 100%);
   }
 }
 </style>

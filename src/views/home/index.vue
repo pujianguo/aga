@@ -109,10 +109,39 @@ import Section7 from './Section7.vue'
 
 @media screen and (max-width: 768px) {
   .home-page {
-    min-width: 320px;
-    margin: 0 auto;
-    color: #fff;
-    background: #000;
+    &::before {
+      width: 8vw;
+      height: 100vh;
+      background: linear-gradient(90deg, rgb(0 0 0 / 50%) 0%, rgb(0 0 0 / 0%) 100%);
+    }
+
+    &::after {
+      width: 8vw;
+      height: 100vh;
+      background: linear-gradient(-90deg, rgb(0 0 0 / 50%) 0%, rgb(0 0 0 / 0%) 100%);
+    }
+
+    section {
+      width: 100%;
+
+      .container {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1200px;
+        height: 100%;
+        min-height: 100vh;
+        margin: 0 auto;
+
+        .section-title {
+          font-family: Mackay Test;
+          font-size: 60px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 66px;
+          letter-spacing: .05em;
+        }
+      }
+    }
   }
 }
 </style>

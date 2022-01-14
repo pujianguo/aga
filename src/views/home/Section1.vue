@@ -52,7 +52,7 @@ const mousemoveHandler = (e) => {
 <style lang="scss">
 .home-section-1 {
   z-index: 3;
-  background: url("/images/home/section1_bg.png") no-repeat center / cover;
+  background: url("https://media.arche.network/arche2.0/images/aga/aga-slide1-img.png") no-repeat center / cover;
 
   .container {
     z-index: 2;
@@ -161,8 +161,34 @@ const mousemoveHandler = (e) => {
 
 @media screen and (max-width: 768px) {
   .home-section-1 {
+    background: url("https://media.arche.network/arche2.0/images/aga/aga-slide1-img-mb.png") no-repeat center / cover;
+
     .container {
+      min-height: auto !important;
       padding: 6vw;
+      padding-top: 10vw;
+
+      .line {
+        width: 50%;
+      }
+
+      .text-content {
+        padding-top: 80vw;
+        padding-bottom: 20vw;
+
+        .title {
+          font-size: 36px;
+          letter-spacing: .05em;
+        }
+
+        .join {
+          padding: 8px 30px;
+          margin-top: 20px;
+          font-size: 18px;
+          line-height: 1.4;
+          border-radius: 6px;
+        }
+      }
     }
   }
 }

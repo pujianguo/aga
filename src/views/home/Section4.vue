@@ -154,7 +154,7 @@ const handleNext = () => {
       <div class="big-img-box">
         <div class="img-wrap"><img class="img" :src="currentItem.bigImage" alt=""></div>
         <div class="content">
-          <div class="title">Guild List</div>
+          <div class="title">Guilds</div>
           <div class="control">
             <svg-icon class="icon" name="left" @click="handlePrev"></svg-icon>
             <svg-icon class="icon" name="right" @click="handleNext"></svg-icon>
@@ -198,6 +198,7 @@ const handleNext = () => {
           </div>
           <div class="card-footer">
             <div class="community-list">
+              <a class="btn" target="_blank" :href="currentItem.website">WEBSITE</a>
               <a class="item" target="_blank" v-for="(v, k, i) in currentItem.community" :key="i" :href="v">
                 <svg-img class="icon" :name="'community_' + k"></svg-img>
                 <span>{{k}}</span>
@@ -536,6 +537,192 @@ const handleNext = () => {
 @media screen and (max-width: 768px) {
   .home-section-4 {
     .container {
+      padding: 6vw;
+      padding-top: 100px;
+
+      .big-img-box {
+        width: 100%;
+        height: 35vw;
+
+        .img-wrap {
+          width: 100%;
+          height: 100%;
+          transform-origin: top center;
+          animation: imgop 20s linear infinite;
+
+          @keyframes imgop {
+            from {
+              opacity: .8;
+              transform: scale(1.6);
+            }
+
+            to {
+              opacity: 1;
+              transform: scale(1.8);
+            }
+          }
+
+          .img {
+            display: block;
+            width: 100%;
+          }
+        }
+
+        .content {
+          z-index: 999;
+
+          .title {
+            top: -10px;
+            font-size: 32px;
+          }
+        }
+
+        .control {
+          top: 80%;
+          z-index: 999;
+
+          .icon {
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .swiper-container {
+        position: relative;
+        z-index: 10;
+        width: 320vw;
+        margin-top: 50px;
+
+        .swiper-wrapper {
+          .swiper-slide {
+            .img {
+              padding: 1px;
+            }
+          }
+
+          .swiper-slide-active {
+            background: linear-gradient(180deg, rgb(255 255 255 / 75%) 0%, rgb(255 255 255 / 5%) 100%);
+            border-radius: 12px;
+          }
+
+          .swiper-slide-active,
+          .swiper-slide-duplicate-active {
+            z-index: 999;
+            opacity: 1;
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      .info-box {
+        flex-direction: column;
+        width: 76vw;
+        margin-top: 40px;
+        margin-right: 6vw;
+        margin-left: 6vw;
+
+        .card {
+          flex: 1;
+          padding-top: 30px;
+
+          &:nth-child(1) {
+            position: relative;
+
+            &::before {
+              position: absolute;
+              top: -1px;
+              right: 0;
+              width: 0;
+              height: 12px;
+              content: "";
+              border-left: 1px solid #fff;
+            }
+          }
+
+          .card-title {
+            font-size: 18px;
+            line-height: 1;
+          }
+
+          .card-content {
+            height: auto;
+            margin-top: 16px;
+
+            .list {
+              .list-item {
+                justify-content: space-between;
+
+                .item-label {
+                  width: auto;
+                  font-size: 14px;
+                  line-height: 1.8;
+                }
+
+                .item-value {
+                  font-size: 14px;
+                  line-height: 1.8;
+                }
+              }
+            }
+
+            .desc {
+              font-size: 14px;
+              line-height: 1.6;
+            }
+          }
+
+          .card-footer {
+            margin-top: 0;
+
+            .btn {
+              display: none;
+
+              &:hover {
+                color: rgb(0 0 0 / 100%);
+                background: rgb(255 255 255 / 100%);
+              }
+            }
+
+            .community-list {
+              display: flex;
+              gap: 40px;
+              align-items: center;
+              justify-content: flex-start;
+              margin-top: 30px;
+
+              .btn {
+                display: block;
+                color: rgb(0 0 0 / 100%);
+                background: rgb(255 255 255 / 100%);
+              }
+
+              .item {
+                display: flex;
+                gap: 14px;
+                width: 32px;
+                height: 32px;
+                color: #fff;
+
+                &:hover {
+                  text-decoration: underline;
+                }
+
+                .icon {
+                  display: inline-block;
+                  width: 32px;
+                  height: 32px;
+                }
+
+                span {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

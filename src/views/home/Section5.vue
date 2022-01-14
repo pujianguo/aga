@@ -6,6 +6,7 @@
         <div class="item fromLeft do" v-for="(item, index) in list" :key="item.id" :class="['ae-' + index]">
           <div class="item-bg">
             <div class="item-title" v-html="item.title"></div>
+            <div class="item-desc" v-html="item.desc"></div>
           </div>
           <div class="item-content">
             <div class="item-title" v-html="item.title"></div>
@@ -205,6 +206,169 @@ const list = [
 @media screen and (max-width: 768px) {
   .home-section-5 {
     .container {
+      padding: 6vw;
+      padding-top: 80px;
+
+      .section-title {
+        font-size: 32px;
+        line-height: 1.6;
+      }
+
+      .content {
+        flex-direction: column;
+        margin-top: 40px;
+
+        .item {
+          width: 100%;
+          height: 140px;
+          padding-top: 0;
+          background: rgb(48 48 48 / 100%);
+          border-radius: 12px;
+
+          &:hover {
+            .item-bg {
+              top: 0;
+
+              .item-title {
+                display: flex;
+              }
+            }
+
+            .item-content {
+              top: 100%;
+            }
+          }
+
+          .item-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-content: flex-end;
+            justify-content: space-between;
+
+            // align-items: flex-end;
+            width: 100%;
+            height: 100%;
+            padding: 16px;
+            transition: all .5s;
+          }
+
+          .item-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: #7942f7;
+            transition: all .5s;
+          }
+
+          .item-title {
+            align-items: flex-end;
+            justify-content: flex-end;
+            width: 100%;
+            height: auto;
+            padding: 0;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 1;
+            text-align: right;
+          }
+
+          .item-desc {
+            width: 80%;
+            margin-top: 0;
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: right;
+          }
+
+          &:nth-child(1) {
+            .item-bg {
+              background: url("https://media.arche.network/arche2.0/images/aga/aga-features-1.png") no-repeat;
+              background-position: left top;
+              background-size: 44%;
+            }
+          }
+
+          &:nth-child(2) {
+            .item-bg {
+              align-items: flex-start;
+              background: url("https://media.arche.network/arche2.0/images/aga/aga-features-2.png") no-repeat;
+              background-position: right top;
+              background-size: 44%;
+
+              .item-title {
+                justify-content: flex-start;
+                text-align: left;
+              }
+
+              .item-desc {
+                text-align: left;
+              }
+            }
+          }
+
+          &:nth-child(3) {
+            .item-bg {
+              background: url("https://media.arche.network/arche2.0/images/aga/aga-features-3.png") no-repeat;
+              background-position: left top;
+              background-size: 44%;
+            }
+          }
+
+          &:nth-child(4) {
+            .item-bg {
+              align-items: flex-start;
+              background: url("https://media.arche.network/arche2.0/images/aga/aga-features-4.png") no-repeat;
+              background-position: right top;
+              background-size: 44%;
+
+              .item-title {
+                justify-content: flex-start;
+                text-align: left;
+              }
+
+              .item-desc {
+                text-align: left;
+              }
+            }
+          }
+
+          &:nth-child(5) {
+            .item-bg {
+              background: url("https://media.arche.network/arche2.0/images/aga/aga-features-5.png") no-repeat;
+              background-position: left top;
+              background-size: 44%;
+            }
+          }
+
+          &:nth-child(6) {
+            .item-bg {
+              align-items: flex-start;
+              background: url("https://media.arche.network/arche2.0/images/aga/aga-features-6.png") no-repeat;
+              background-position: right top;
+              background-size: 44%;
+
+              .item-title {
+                justify-content: flex-start;
+                text-align: left;
+              }
+
+              .item-desc {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

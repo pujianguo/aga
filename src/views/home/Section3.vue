@@ -34,10 +34,10 @@ onMounted(() => {
   })
 })
 const list = [
-  { id: 1, title: 'Latest and Top Games Offering', desc: 'Arche have the latest game connection and information and share the information such as the game strategy to the guilds that allows them to join the game in early stage.', imgUrl: '/images/home/section3_item1_bg.png' },
-  { id: 2, title: 'Launchpad Whitelist', desc: 'Can get whitelisted from Game Asset Offerings for Guilds that support Games in the early stage or invested in.', imgUrl: '/images/home/section3_item2_bg.png' },
-  { id: 3, title: 'Listed in Arche Network', desc: 'The Guilds logo will be shown below the games that they participate in, that allows more people to enter the guilds when they wanna join the game.', imgUrl: '/images/home/section3_item3_bg.png' },
-  { id: 4, title: 'More Incentive', desc: 'When a projects want to do promotion, they could submit their event detail to Arche and we will deliver the event information to the Guilds in AGA. And the Guilds community could get the exclusive incentive.', imgUrl: '/images/home/section3_item4_bg.png' },
+  { id: 1, title: 'Latest and Top Games Offering', desc: 'Arche have the latest game connection and information and share the information such as the game strategy to the guilds that allows them to join the game in early stage.', imgUrl: 'https://media.arche.network/arche2.0/images/aga/aga-why-1.png' },
+  { id: 2, title: 'Launchpad Whitelist', desc: 'Can get whitelisted from Game Asset Offerings for Guilds that support Games in the early stage or invested in.', imgUrl: 'https://media.arche.network/arche2.0/images/aga/aga-why-2.png' },
+  { id: 3, title: 'Listed in Arche Network', desc: 'The Guilds logo will be shown below the games that they participate in, that allows more people to enter the guilds when they wanna join the game.', imgUrl: 'https://media.arche.network/arche2.0/images/aga/aga-why-3.png' },
+  { id: 4, title: 'More Incentive', desc: 'When a projects want to do promotion, they could submit their event detail to Arche and we will deliver the event information to the Guilds in AGA. And the Guilds community could get the exclusive incentive.', imgUrl: 'https://media.arche.network/arche2.0/images/aga/aga-why-4.png' },
 ]
 const currentIndex = ref(0)
 const currentItem = computed(() => {
@@ -94,6 +94,15 @@ const handleNext = () => {
             </div>
           </div>
           <!-- <svg-icon class="last-icon" name="plus"></svg-icon> -->
+        </div>
+      </div>
+      <div class="list-mb">
+        <div class="list-item" v-for="item in list" :key="item.id">
+          <div class="item-icon">
+              <svg-img class="icon-ball" name="ball" v-for="i in item.id" :key="index + i"></svg-img>
+          </div>
+          <div class="titleimg" :style="{'background': `url(${item.imgUrl})`}">{{item.title}}</div>
+          <div class="content">{{item.desc}}</div>
         </div>
       </div>
     </div>
@@ -269,6 +278,8 @@ const handleNext = () => {
             display: block;
             width: 100%;
             height: 100%;
+            border: 1px solid #fff;
+            border-radius: 425px;
           }
 
           .content {
@@ -309,6 +320,10 @@ const handleNext = () => {
           }
         }
       }
+    }
+
+    .list-mb {
+      display: none;
     }
 
     .line {
@@ -393,6 +408,135 @@ const handleNext = () => {
 @media screen and (max-width: 768px) {
   .home-section-3 {
     .container {
+      width: 100%;
+      height: auto !important;
+      min-height: auto !important;
+      padding: 6vw;
+
+      .title {
+        align-self: center;
+        margin-top: 60px;
+        margin-bottom: 80px;
+        font-size: 32px;
+        line-height: 1.6;
+        text-align: center;
+        letter-spacing: 0;
+      }
+
+      .list-mb {
+        display: flex;
+        flex-direction: column;
+        gap: 15vw;
+
+        .list-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+
+          .item-icon {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            margin-bottom: 20px;
+            margin-left: -4px;
+
+            .icon-ball {
+              width: 20px;
+              height: 20px;
+            }
+          }
+
+          &:nth-child(3) {
+            .item-icon {
+              position: relative;
+
+              .icon-ball {
+                position: absolute;
+
+                &:nth-child(1) {
+                  bottom: 0;
+                  left: 0;
+                }
+
+                &:nth-child(2) {
+                  right: 0;
+                  bottom: 0;
+                }
+
+                &:nth-child(3) {
+                  bottom: 17px;
+                  left: 10px;
+                }
+              }
+            }
+          }
+
+          .titleimg {
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 90px;
+            padding: 10px 12vw;
+            margin-bottom: 40px;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 130%;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            background-position-y: -50px !important;
+            background-size: cover !important;
+            border: 1px solid rgb(255 255 255 / 80%);
+            border-radius: 90px;
+
+            &::before {
+              position: absolute;
+              bottom: -12vw;
+              width: 1px;
+              height: 12vw;
+              content: "";
+              background: linear-gradient(180deg, rgb(255 255 255 / 80%) 40%, rgb(255 255 255 / 0%) 100%);
+            }
+          }
+
+          .content {
+            padding: 0 4vw;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.6;
+            color: #fff;
+            text-align: center;
+            opacity: .7;
+          }
+        }
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .swiper-container {
+        display: none;
+      }
+
+      .line {
+        display: none;
+      }
+
+      .footer {
+        display: none;
+      }
     }
   }
 }

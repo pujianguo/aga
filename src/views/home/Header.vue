@@ -211,6 +211,74 @@ const goPagePosition = (item) => {
 }
 
 @media screen and (max-width: 768px) {
+  .home-header {
+    &::before {
+      position: fixed;
+      z-index: 9;
+      width: 100vw;
+      height: 30vw;
+      content: "";
+      background: linear-gradient(180deg, rgb(0 0 0 / 90%) 40%, rgb(0 0 0 / 0%) 100%);
+    }
 
+    .header-left {
+      top: 6vw;
+      bottom: 6vw;
+      left: 6vw;
+
+      .logo-img {
+        width: 20vw;
+        height: 7vw;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      &::before {
+        width: 3vw;
+        height: 3vw;
+      }
+    }
+
+    .header-right {
+      top: 6vw;
+      right: 6vw;
+      bottom: 6vw;
+      z-index: 10;
+      width: auto;
+
+      .joinbutton {
+        font-size: 18px;
+        line-height: 8vw;
+        letter-spacing: 0;
+
+        &::before {
+          right: 1px;
+          bottom: 6px;
+          width: 92%;
+        }
+      }
+
+      .info {
+        top: 130vw;
+        right: calc(88vw - 1em);
+        display: none;
+        font-size: 10px;
+        line-height: 1;
+        transform: rotate(90deg) scale(.8);
+      }
+
+      &::before {
+        width: 3vw;
+        height: 3vw;
+      }
+
+      &::after {
+        width: 3vw;
+        height: 3vw;
+      }
+    }
+  }
 }
 </style>

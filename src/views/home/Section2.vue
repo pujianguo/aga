@@ -153,6 +153,66 @@ useInitGsap(initGsap)
 @media screen and (max-width: 768px) {
   .home-section-2 {
     .container {
+      position: relative;
+      gap: 40px;
+      padding: 6vw;
+
+      .title {
+        position: relative;
+        z-index: 5;
+        width: 44%;
+        margin-bottom: 30vw;
+        font-size: 32px;
+        line-height: 1.6;
+      }
+
+      .content {
+        flex-direction: column;
+
+        .left {
+          .card {
+            max-width: auto;
+            padding-left: 6vw;
+
+            &:first-child {
+              padding-bottom: 4em;
+
+              &::before {
+                top: 20px;
+                left: 0;
+                width: 12px;
+              }
+            }
+
+            h2 {
+              margin-bottom: .5em;
+              font-size: 20px;
+              line-height: 2;
+            }
+
+            p {
+              font-size: 16px;
+              line-height: 1.6;
+            }
+          }
+
+          .down-icon {
+            width: 32px;
+            height: 32px;
+            margin-top: 2em;
+            margin-left: 6vw;
+          }
+        }
+
+        .right {
+          position: absolute;
+          top: 6vw;
+          right: -6vw;
+          z-index: 1;
+          flex: 1;
+          transform: scale(1.25) rotate(-70deg);
+        }
+      }
     }
   }
 }
