@@ -101,41 +101,45 @@ const list = [
           height: 100%;
           padding: 16px;
           transition: all .5s;
+
+          .item-desc {
+            display: none;
+          }
         }
 
         &:nth-child(1) {
           .item-bg {
-            background: url("/images/home/section5_item1_bg.svg") no-repeat center / cover;
+            background: url("https://media.arche.network/arche2.0/images/aga/aga-features-1.png") no-repeat center / cover;
           }
         }
 
         &:nth-child(2) {
           .item-bg {
-            background: url("/images/home/section5_item2_bg.svg") no-repeat center / cover;
+            background: url("https://media.arche.network/arche2.0/images/aga/aga-features-2.png") no-repeat center / cover;
           }
         }
 
         &:nth-child(3) {
           .item-bg {
-            background: url("/images/home/section5_item3_bg.svg") no-repeat center / cover;
+            background: url("https://media.arche.network/arche2.0/images/aga/aga-features-3.png") no-repeat center / cover;
           }
         }
 
         &:nth-child(4) {
           .item-bg {
-            background: url("/images/home/section5_item4_bg.svg") no-repeat center / cover;
+            background: url("https://media.arche.network/arche2.0/images/aga/aga-features-4.png") no-repeat center / cover;
           }
         }
 
         &:nth-child(5) {
           .item-bg {
-            background: url("/images/home/section5_item5_bg.svg") no-repeat center / cover;
+            background: url("https://media.arche.network/arche2.0/images/aga/aga-features-5.png") no-repeat center / cover;
           }
         }
 
         &:nth-child(6) {
           .item-bg {
-            background: url("/images/home/section5_item6_bg.svg") no-repeat center / cover;
+            background: url("https://media.arche.network/arche2.0/images/aga/aga-features-6.png") no-repeat center / cover;
           }
         }
 
@@ -189,17 +193,95 @@ const list = [
 }
 
 @media screen and (min-width: 1100px) and (max-width: 1400px) {
-  .home-section-5 .container {
+  .home-section-5 {
+    .container {
+      padding: 50px 20px;
+
+      .content {
+        margin-top: 60px;
+
+        .item {
+          width: calc((100% - 80px) / 3);
+          height: 310px;
+          border-radius: 16px;
+
+          .item-title {
+            height: 60px;
+            padding-right: 16px;
+            padding-left: 16px;
+            font-size: 18px;
+          }
+
+          .item-desc {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1099px) {
-  .home-section-5 .container {
+  .home-section-5 {
+    .container {
+      padding: 20px;
+
+      .content {
+        margin-top: 60px;
+
+        .item {
+          width: calc((100% - 80px) / 3);
+          height: 260px;
+          border-radius: 12px;
+
+          .item-title {
+            height: 60px;
+            padding-right: 16px;
+            padding-left: 16px;
+            font-size: 16px;
+          }
+
+          .item-desc {
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 899px) {
-  .home-section-5 .container {
+  .home-section-5 {
+    .container {
+      padding: 20px;
+
+      .content {
+        margin-top: 60px;
+
+        .item {
+          width: calc((100% - 80px) / 3);
+          height: 220px;
+          border-radius: 12px;
+
+          .item-title {
+            height: 40px;
+            padding-right: 0;
+            padding-left: 0;
+            font-size: 14px;
+          }
+
+          .item-desc {
+            margin-top: 20px;
+            font-size: 12px;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
   }
 }
 

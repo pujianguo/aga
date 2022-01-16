@@ -136,17 +136,176 @@ useInitGsap(initGsap)
 }
 
 @media screen and (min-width: 1100px) and (max-width: 1400px) {
-  .home-section-2 .container {
+  .home-section-2 {
+    .container {
+      gap: 40px;
+      padding: 90px 20px 100px;
+
+      .title {
+        font-size: 50px;
+        line-height: 1;
+      }
+
+      .content {
+        .left {
+          .card {
+            max-width: 460px;
+
+            &:first-child {
+              padding-bottom: 80px;
+
+              &::before {
+                top: 20px;
+                left: -32px;
+                width: 16px;
+              }
+            }
+
+            h2 {
+              margin-bottom: 1em;
+              font-size: 22px;
+              line-height: 1.8;
+            }
+
+            p {
+              font-size: 18px;
+              line-height: 1.8;
+            }
+          }
+
+          .down-icon {
+            width: 52px;
+            height: 52px;
+            margin-top: 80px;
+          }
+        }
+
+        .right {
+          flex: 1;
+
+          .right-image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1099px) {
-  .home-section-2 .container {
+  .home-section-2 {
+    .container {
+      gap: 40px;
+      padding: 80px 20px;
+
+      .title {
+        font-size: 40px;
+        line-height: 1;
+      }
+
+      .content {
+        .left {
+          .card {
+            max-width: 380px;
+
+            &:first-child {
+              padding-bottom: 60px;
+
+              &::before {
+                top: 20px;
+                left: -20px;
+                width: 10px;
+              }
+            }
+
+            h2 {
+              margin-bottom: 1em;
+              font-size: 20px;
+              line-height: 1.8;
+            }
+
+            p {
+              font-size: 16px;
+              line-height: 1.8;
+            }
+          }
+
+          .down-icon {
+            width: 44px;
+            height: 44px;
+            margin-top: 60px;
+          }
+        }
+
+        .right {
+          flex: 1;
+
+          .right-image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 899px) {
-  .home-section-2 .container {
+  .home-section-2 {
+    .container {
+      gap: 30px;
+      padding: 60px 20px;
+
+      .title {
+        font-size: 32px;
+        line-height: 1;
+      }
+
+      .content {
+        .left {
+          .card {
+            max-width: 280px;
+
+            &:first-child {
+              padding-bottom: 40px;
+
+              &::before {
+                top: 12px;
+                left: -12px;
+                width: 6px;
+              }
+            }
+
+            h2 {
+              margin-bottom: .6em;
+              font-size: 16px;
+              line-height: 1.8;
+            }
+
+            p {
+              font-size: 14px;
+              line-height: 1.8;
+            }
+          }
+
+          .down-icon {
+            width: 32px;
+            height: 32px;
+            margin-top: 60px;
+          }
+        }
+
+        .right {
+          flex: 1;
+
+          .right-image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
   }
 }
 

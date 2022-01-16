@@ -391,17 +391,236 @@ const handleNext = () => {
 }
 
 @media screen and (min-width: 1100px) and (max-width: 1400px) {
-  .home-section-3 .container {
+  .home-section-3 {
+    .container {
+      height: 860px !important;
+      min-height: 860px !important;
+      padding: 90px 20px 100px;
+
+      .title {
+        margin-bottom: 60px;
+        font-size: 50px;
+        line-height: 1;
+      }
+
+      .menu {
+        .content-box {
+          .item {
+            .item-text {
+              max-width: 140px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .swiper-container {
+        position: relative;
+        width: 130vw;
+        height: 260px;
+
+        .swiper-wrapper {
+          .swiper-slide {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .list-mb {
+        display: none;
+      }
+
+      .line {
+        top: -36px;
+        height: 60px;
+      }
+
+      .footer {
+        width: 100%;
+        margin-top: -20px;
+        margin-bottom: 60px;
+
+        .icon {
+          width: 50px;
+          height: 50px;
+          cursor: pointer;
+        }
+
+        .btn {
+          height: 50px;
+          font-size: 22px;
+          line-height: 50px;
+
+          &::before {
+            width: 14px;
+            height: 14px;
+          }
+
+          &::after {
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1099px) {
-  .home-section-3 .container {
+  .home-section-3 {
+    .container {
+      height: 760px !important;
+      min-height: 760px !important;
+      padding: 80px 20px;
+
+      .title {
+        margin-bottom: 40px;
+        font-size: 40px;
+        line-height: 1;
+      }
+
+      .menu {
+        .content-box {
+          .item {
+            .item-text {
+              max-width: 120px;
+              height: 2em;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .swiper-container {
+        position: relative;
+        width: 150vw;
+        height: 260px;
+
+        .swiper-wrapper {
+          .swiper-slide {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .list-mb {
+        display: none;
+      }
+
+      .line {
+        top: -36px;
+        height: 60px;
+      }
+
+      .footer {
+        width: 100%;
+        margin-top: -20px;
+        margin-bottom: 40px;
+
+        .icon {
+          width: 44px;
+          height: 44px;
+          cursor: pointer;
+        }
+
+        .btn {
+          height: 40px;
+          font-size: 20px;
+          line-height: 40px;
+
+          &::before {
+            width: 10px;
+            height: 10px;
+          }
+
+          &::after {
+            width: 10px;
+            height: 10px;
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 899px) {
-  .home-section-3 .container {
+  .home-section-3 {
+    .container {
+      height: 660px !important;
+      min-height: 660px !important;
+      padding: 60px 20px;
+
+      .title {
+        margin-bottom: 32px;
+        font-size: 32px;
+        line-height: 1;
+      }
+
+      .menu {
+        .content-box {
+          .item {
+            .item-text {
+              max-width: 110px;
+              height: 2em;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .swiper-container {
+        position: relative;
+        width: 180vw;
+        height: 220px;
+
+        .swiper-wrapper {
+          .swiper-slide {
+            font-size: 12px;
+
+            .content {
+              height: 160px;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .list-mb {
+        display: none;
+      }
+
+      .line {
+        top: -36px;
+        height: 60px;
+      }
+
+      .footer {
+        width: 100%;
+        margin-top: -20px;
+        margin-bottom: 40px;
+
+        .icon {
+          width: 32px;
+          height: 32px;
+        }
+
+        .btn {
+          height: 32px;
+          font-size: 16px;
+          line-height: 32px;
+
+          &::before {
+            width: 8px;
+            height: 8px;
+          }
+
+          &::after {
+            width: 8px;
+            height: 8px;
+          }
+        }
+      }
+    }
   }
 }
 

@@ -83,7 +83,7 @@ const goPagePosition = (item) => {
         font-size: 15px;
         font-style: normal;
         font-weight: 500;
-        line-height: 20px;
+        line-height: 1.6;
         text-align: left;
         letter-spacing: .05em;
         cursor: pointer;
@@ -198,16 +198,158 @@ const goPagePosition = (item) => {
 
 @media screen and (min-width: 1100px) and (max-width: 1400px) {
   .home-header {
+    .header-left {
+      top: 3vw;
+      bottom: 3vw;
+      left: 3vw;
+
+      .logo-img {
+        width: 120px;
+        height: 40px;
+      }
+
+      .menu {
+        margin-top: 80px;
+
+        .menu-item {
+          margin-top: 40px;
+          font-size: 13px;
+          letter-spacing: 0;
+        }
+      }
+
+      &::before {
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    .header-right {
+      top: 3vw;
+      right: 3vw;
+      bottom: 3vw;
+
+      .joinbutton {
+        font-size: 24px;
+        line-height: 40px;
+
+        &::before {
+          right: 1px;
+          bottom: 7px;
+          width: 92%;
+        }
+      }
+
+      &::after {
+        width: 14px;
+        height: 14px;
+      }
+    }
   }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1099px) {
   .home-header {
+    .header-left {
+      top: 2.4vw;
+      bottom: 2.4vw;
+      left: 2.4vw;
+
+      .logo-img {
+        width: 90px;
+        height: 30px;
+      }
+
+      .menu {
+        margin-top: 60px;
+
+        .menu-item {
+          margin-top: 30px;
+          font-size: 12px;
+          letter-spacing: 0;
+        }
+      }
+
+      &::before {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    .header-right {
+      top: 2.4vw;
+      right: 2.4vw;
+      bottom: 2.4vw;
+
+      .joinbutton {
+        font-size: 20px;
+        line-height: 30px;
+
+        &::before {
+          right: 1px;
+          bottom: 4px;
+          width: 92%;
+        }
+      }
+
+      &::after {
+        width: 10px;
+        height: 10px;
+      }
+    }
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 899px) {
+  .home-header {
+    .header-left {
+      top: 2vw;
+      bottom: 2vw;
+      left: 2vw;
 
+      .logo-img {
+        width: 80px;
+        height: 26px;
+      }
+
+      .menu {
+        margin-top: 50px;
+
+        .menu-item {
+          margin-top: 24px;
+          font-size: 12px;
+          letter-spacing: 0;
+        }
+      }
+
+      &::before {
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    .header-right {
+      top: 2vw;
+      right: 2vw;
+      bottom: 2vw;
+
+      .joinbutton {
+        font-size: 18px;
+        line-height: 26px;
+
+        &::before {
+          right: 1px;
+          bottom: 4px;
+          width: 92%;
+        }
+      }
+
+      &::after {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {

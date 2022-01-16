@@ -142,20 +142,68 @@ const mousemoveHandler = (e) => {
 }
 
 @media screen and (min-width: 1100px) and (max-width: 1400px) {
-  .home-section-1 .container {
+  .home-section-1 {
+    .container {
+      padding: 60px 20px 15vh;
+
+      .text-content {
+        .title {
+          font-size: 64px;
+        }
+
+        .join {
+          padding: 14px 32px;
+          margin-top: 24px;
+          font-size: 22px;
+          line-height: 1;
+          border-radius: 9px;
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1099px) {
-  .home-section-1 .container {
+  .home-section-1 {
+    .container {
+      padding: 60px 20px 15vh;
+
+      .text-content {
+        .title {
+          font-size: 50px;
+        }
+
+        .join {
+          padding: 12px 28px;
+          margin-top: 20px;
+          font-size: 20px;
+          line-height: 1;
+          border-radius: 7px;
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 899px) {
-  .home-section-1 .background-wrap {
-  }
+  .home-section-1 {
+    .container {
+      padding: 30px 20px 15vh;
 
-  .home-section-1 .container {
+      .text-content {
+        .title {
+          font-size: 46px;
+        }
+
+        .join {
+          padding: 12px 28px;
+          margin-top: 20px;
+          font-size: 18px;
+          line-height: 1;
+          border-radius: 7px;
+        }
+      }
+    }
   }
 }
 

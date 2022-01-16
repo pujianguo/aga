@@ -71,39 +71,56 @@ import Section7 from './Section7.vue'
       }
     }
   }
-
-  // section {
-  //   position: relative;
-  //   width: 100%;
-  //   min-height: 100vh;
-
-  //   .container {
-  //     position: absolute !important;
-  //     top: 0;
-  //     right: 0;
-  //     bottom: 0;
-  //     left: 0;
-  //     display: flex;
-  //     align-items: center;
-  //     justify-content: space-between;
-  //     padding: 120px;
-  //   }
-  // }
 }
 
 @media screen and (min-width: 1100px) and (max-width: 1400px) {
   .home-page {
+    section {
+      width: 100%;
+
+      .container {
+        max-width: 940px;
+
+        .section-title {
+          font-size: 50px;
+          line-height: 56px;
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1099px) {
-  .home-page{
+  .home-page {
+    section {
+      width: 100%;
 
+      .container {
+        max-width: 780px;
+
+        .section-title {
+          font-size: 40px;
+          line-height: 46px;
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 899px) {
-  .home-page{
+  .home-page {
+    section {
+      width: 100%;
+
+      .container {
+        max-width: 660px;
+
+        .section-title {
+          font-size: 30px;
+          line-height: 36px;
+        }
+      }
+    }
   }
 }
 

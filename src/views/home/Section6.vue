@@ -362,17 +362,181 @@ const progressleft = computed(() => {
 }
 
 @media screen and (min-width: 1100px) and (max-width: 1400px) {
-  .home-section-6 .container {
+  .home-section-6 {
+    .container {
+      .section-title {
+        font-size: 44px !important;
+      }
+
+      .big-img-box {
+        height: 310px;
+        padding: 30px 36px;
+        margin-top: 60px;
+        border-radius: 16px;
+
+        .header {
+          .logo {
+            width: 80px;
+            height: 30px;
+          }
+
+          .icon {
+            width: 54px;
+            height: 54px;
+          }
+        }
+
+        .middle {
+          .text {
+            max-width: 320px;
+            padding: 16px;
+            font-size: 24px;
+            line-height: 1.2;
+
+            &::before {
+              width: 14px;
+              height: 14px;
+            }
+
+            &::after {
+              width: 14px;
+              height: 14px;
+            }
+          }
+        }
+
+        .footer {
+          .month {
+            font-size: 16px;
+            line-height: 1.6;
+          }
+
+          .progress {
+            width: 70%;
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1099px) {
-  .home-section-6 .container {
+  .home-section-6 {
+    .container {
+      .section-title {
+        font-size: 36px !important;
+      }
+
+      .big-img-box {
+        height: 260px;
+        padding: 20px 26px;
+        margin-top: 40px;
+        border-radius: 16px;
+
+        .header {
+          .logo {
+            width: 80px;
+            height: 30px;
+          }
+
+          .icon {
+            width: 44px;
+            height: 44px;
+          }
+        }
+
+        .middle {
+          .text {
+            max-width: 320px;
+            padding: 16px;
+            font-size: 20px;
+            line-height: 1.2;
+
+            &::before {
+              width: 10px;
+              height: 10px;
+            }
+
+            &::after {
+              width: 10px;
+              height: 10px;
+            }
+          }
+        }
+
+        .footer {
+          .month {
+            font-size: 16px;
+            line-height: 1.6;
+          }
+
+          .progress {
+            width: 70%;
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 899px) {
-  .home-section-6 .container {
+  .home-section-6 {
+    .container {
+      padding: 60px 20px;
+
+      .section-title {
+        font-size: 28px !important;
+      }
+
+      .big-img-box {
+        height: 220px;
+        padding: 16px 22px;
+        margin-top: 40px;
+        border-radius: 16px;
+
+        .header {
+          .logo {
+            width: 80px;
+            height: 30px;
+          }
+
+          .icon {
+            width: 44px;
+            height: 44px;
+          }
+        }
+
+        .middle {
+          .text {
+            max-width: 260px;
+            padding: 16px;
+            font-size: 18px;
+            line-height: 1.2;
+
+            &::before {
+              width: 8px;
+              height: 8px;
+            }
+
+            &::after {
+              width: 8px;
+              height: 8px;
+            }
+          }
+        }
+
+        .footer {
+          .month {
+            font-size: 16px;
+            line-height: 1.6;
+          }
+
+          .progress {
+            width: 70%;
+          }
+        }
+      }
+    }
   }
 }
 

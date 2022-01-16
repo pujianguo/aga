@@ -487,6 +487,10 @@ const handleNext = () => {
             align-items: center;
             justify-content: flex-start;
 
+            .btn {
+              display: none;
+            }
+
             .item {
               display: flex;
               gap: 14px;
@@ -520,17 +524,300 @@ const handleNext = () => {
 }
 
 @media screen and (min-width: 1100px) and (max-width: 1400px) {
-  .home-section-4 .container {
+  .home-section-4 {
+    .container {
+      .big-img-box {
+        .content {
+          .title {
+            font-size: 50px;
+            line-height: 1;
+          }
+        }
+
+        .control {
+          .icon {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+
+      .swiper-container {
+        .swiper-wrapper {
+          .swiper-slide {
+            .img {
+              padding: 1px;
+            }
+          }
+        }
+      }
+
+      .info-box {
+        margin-top: 60px;
+
+        .card {
+          flex: 1;
+          padding-top: 50px;
+
+          .card-title {
+            font-size: 22px;
+            line-height: 1.6;
+          }
+
+          .card-content {
+            height: auto;
+            margin-top: 20px;
+
+            .list {
+              .list-item {
+                .item-label {
+                  width: 50%;
+                  font-size: 14px;
+                  line-height: 2;
+                }
+
+                .item-value {
+                  font-size: 14px;
+                  line-height: 2;
+                }
+              }
+            }
+
+            .desc {
+              font-size: 14px;
+              line-height: 2;
+            }
+          }
+
+          .card-footer {
+            margin-top: 32px;
+
+            .btn {
+              display: block;
+              width: 130px;
+              height: 32px;
+              font-size: 14px;
+              line-height: 32px;
+            }
+
+            .community-list {
+              .item {
+                .icon {
+                  display: inline-block;
+                  width: 28px;
+                  height: 28px;
+                }
+
+                span {
+                  font-size: 14px;
+                  line-height: 28px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1099px) {
-  .home-section-4 .container {
+  .home-section-4 {
+    .container {
+      .big-img-box {
+        .content {
+          .title {
+            font-size: 40px;
+            line-height: 1;
+          }
+        }
+
+        .control {
+          .icon {
+            width: 44px;
+            height: 44px;
+          }
+        }
+      }
+
+      .swiper-container {
+        .swiper-wrapper {
+          .swiper-slide {
+            .img {
+              padding: 1px;
+            }
+          }
+        }
+      }
+
+      .info-box {
+        margin-top: 60px;
+
+        .card {
+          flex: 1;
+          padding-top: 50px;
+
+          .card-title {
+            font-size: 20px;
+            line-height: 1.6;
+          }
+
+          .card-content {
+            height: auto;
+            margin-top: 20px;
+
+            .list {
+              .list-item {
+                .item-label {
+                  width: 50%;
+                  font-size: 12px;
+                  line-height: 2;
+                }
+
+                .item-value {
+                  font-size: 12px;
+                  line-height: 2;
+                }
+              }
+            }
+
+            .desc {
+              font-size: 12px;
+              line-height: 2;
+            }
+          }
+
+          .card-footer {
+            margin-top: 24px;
+
+            .btn {
+              display: block;
+              width: 110px;
+              height: 28px;
+              font-size: 12px;
+              line-height: 28px;
+            }
+
+            .community-list {
+              .item {
+                .icon {
+                  display: inline-block;
+                  width: 24px;
+                  height: 24px;
+                }
+
+                span {
+                  font-size: 12px;
+                  line-height: 24px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 899px) {
-  .home-section-4 .container {
+  .home-section-4 {
+    .container {
+      padding: 60px 20px;
+
+      .big-img-box {
+        .content {
+          .title {
+            font-size: 32px;
+            line-height: 1;
+          }
+        }
+
+        .control {
+          .icon {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+
+      .swiper-container {
+        .swiper-wrapper {
+          .swiper-slide {
+            .img {
+              padding: 1px;
+            }
+          }
+        }
+      }
+
+      .info-box {
+        margin-top: 40px;
+
+        .card {
+          flex: 1;
+          padding-top: 32px;
+
+          .card-title {
+            font-size: 16px;
+            line-height: 1.6;
+          }
+
+          .card-content {
+            height: auto;
+            margin-top: 16px;
+
+            .list {
+              .list-item {
+                .item-label {
+                  width: 50%;
+                  font-size: 12px;
+                  line-height: 2;
+                }
+
+                .item-value {
+                  font-size: 12px;
+                  line-height: 2;
+                }
+              }
+            }
+
+            .desc {
+              font-size: 12px;
+              line-height: 2;
+            }
+          }
+
+          .card-footer {
+            margin-top: 24px;
+
+            .btn {
+              display: block;
+              width: 110px;
+              height: 28px;
+              font-size: 12px;
+              line-height: 28px;
+            }
+
+            .community-list {
+              gap: 20px;
+
+              .item {
+                .icon {
+                  display: inline-block;
+                  width: 24px;
+                  height: 24px;
+                }
+
+                span {
+                  font-size: 12px;
+                  line-height: 24px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 

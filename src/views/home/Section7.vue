@@ -48,7 +48,7 @@ useInitGsap(initGsap)
           <span>Join us</span>
         </div>
         <div class="card-content">
-          <a class="join fromRight ae-7 do" href="https://archenetwork.typeform.com/AGAAPPLY" target="_blank">Join AGA</a>
+          <a class="join fromLeft ae-3 do" href="https://archenetwork.typeform.com/AGAAPPLY" target="_blank">Join AGA</a>
         </div>
       </div>
       <div class="card fromLeft ae-3 do">
@@ -194,17 +194,193 @@ useInitGsap(initGsap)
 }
 
 @media screen and (min-width: 1100px) and (max-width: 1400px) {
-  .home-section-7 .container {
+  .home-section-7 {
+    margin-top: 60px;
+
+    .container {
+      .card {
+        margin: 0 0 80px;
+
+        &:nth-child(3) {
+          margin-bottom: auto;
+        }
+
+        .card-title {
+          .logo-icon {
+            width: 100px;
+            height: 40px;
+          }
+
+          span {
+            font-size: 18px;
+            line-height: 32px;
+          }
+        }
+
+        .card-content {
+          margin-top: 30px;
+
+          .join {
+            padding: 14px 32px;
+            font-size: 18px;
+            line-height: 1;
+            border-radius: 7px;
+          }
+
+          .info {
+            font-size: 18px;
+            line-height: 1.6;
+          }
+
+          .contact-list {
+            a {
+              margin-right: 28px;
+
+              .icon {
+                width: 28px;
+                height: 28px;
+              }
+
+              &:last-child {
+                margin-right: 28px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .page-footer {
+    height: 8px;
   }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1099px) {
-  .home-section-7 .container {
+  .home-section-7 {
+    margin-top: 40px;
+
+    .container {
+      .card {
+        margin: 0 0 60px;
+
+        &:nth-child(3) {
+          margin-bottom: auto;
+        }
+
+        .card-title {
+          .logo-icon {
+            width: 100px;
+            height: 40px;
+          }
+
+          span {
+            font-size: 16px;
+            line-height: 32px;
+          }
+        }
+
+        .card-content {
+          margin-top: 30px;
+
+          .join {
+            padding: 12px 24px;
+            font-size: 16px;
+            line-height: 1;
+            border-radius: 7px;
+          }
+
+          .info {
+            max-width: 320px;
+            font-size: 16px;
+            line-height: 1.6;
+          }
+
+          .contact-list {
+            a {
+              margin-right: 24px;
+
+              .icon {
+                width: 24px;
+                height: 24px;
+              }
+
+              &:last-child {
+                margin-right: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .page-footer {
+    height: 6px;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 899px) {
-  .home-section-7 .container {
+  .home-section-7 {
+    margin-top: 40px;
+
+    .container {
+      .card {
+        margin: 0 0 40px;
+
+        &:nth-child(3) {
+          margin-bottom: auto;
+        }
+
+        .card-title {
+          .logo-icon {
+            width: 80px;
+            height: 30px;
+          }
+
+          span {
+            font-size: 14px;
+            line-height: 30px;
+          }
+        }
+
+        .card-content {
+          margin-top: 30px;
+
+          .join {
+            padding: 10px 20px;
+            font-size: 14px;
+            line-height: 1;
+            border-radius: 7px;
+          }
+
+          .info {
+            max-width: 260px;
+            font-size: 14px;
+            line-height: 1.6;
+          }
+
+          .contact-list {
+            a {
+              margin-right: 20px;
+
+              .icon {
+                width: 20px;
+                height: 20px;
+              }
+
+              &:last-child {
+                margin-right: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .page-footer {
+    height: 6px;
   }
 }
 
